@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Sequences for SocialFund Declaration -->
+        <record id="seq_socialfund_id_type" model="ir.sequence.type">
+            <field name="name">SocialFund Order</field>
+            <field name="code">socialfund.declaration</field>
+        </record>
+
+        <record id="seq_socialfund_id" model="ir.sequence">
+            <field name="name">SocialFund Order</field>
+            <field name="code">socialfund.declaration</field>
+            <field name="prefix">SocialFund</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for TrainingFund Declaration -->
+        <record id="seq_trainingfund_id_type" model="ir.sequence.type">
+            <field name="name">TrainingFund Order</field>
+            <field name="code">trainingfund.declaration</field>
+        </record>
+
+        <record id="seq_trainingfund_id" model="ir.sequence">
+            <field name="name">TrainingFund Order</field>
+            <field name="code">trainingfund.declaration</field>
+            <field name="prefix">TrainingFund</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for Wagetax Declaration -->
+        <record id="seq_wagetax_id_type" model="ir.sequence.type">
+            <field name="name">WageTax Order</field>
+            <field name="code">wagetax.declaration</field>
+        </record>
+
+        <record id="seq_wagetax_id" model="ir.sequence">
+            <field name="name">WageTax Order</field>
+            <field name="code">wagetax.declaration</field>
+            <field name="prefix">WageTax</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for eq_specialtax Declaration -->
+        <record id="seq_eq_specialtax_id_type" model="ir.sequence.type">
+            <field name="name">Eq_SpecialTax Order</field>
+            <field name="code">eq.specialtax.declaration</field>
+        </record>
+
+        <record id="seq_eq_specialtax_id" model="ir.sequence">
+            <field name="name">Eq_SpecialTax Order</field>
+            <field name="code">eq.specialtax.declaration</field>
+            <field name="prefix">Eq_SpecialTax</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for VAT Declaration -->
+        <record id="seq_vat_id_type" model="ir.sequence.type">
+            <field name="name">VAT Order</field>
+            <field name="code">vat.declaration</field>
+        </record>
+
+        <record id="seq_vat_id" model="ir.sequence">
+            <field name="name">VAT Order</field>
+            <field name="code">vat.declaration</field>
+            <field name="prefix">VAT</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for DeductibleVat Statement Declaration -->
+        <record id="seq_deductiblevat_statement_id_type" model="ir.sequence.type">
+            <field name="name">DeductibleVat Statement Order</field>
+            <field name="code">deductiblevat.statement</field>
+        </record>
+
+        <record id="seq_deductiblevat_statement_id" model="ir.sequence">
+            <field name="name">DeductibleVat Statement Order</field>
+            <field name="code">deductiblevat.statement</field>
+            <field name="prefix">DeductibleVat Statement</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+
+    </data>
+</openerp>

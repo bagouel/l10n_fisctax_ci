@@ -1,0 +1,1917 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_fisctax_civ
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20171010\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-23 01:27+0000\n"
+"PO-Revision-Date: 2019-01-23 01:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,deductible_vat_reserve:0
+msgid " PAST DEDUCTIBLE VAT TO REVERSE"
+msgstr ""
+" ANTERIEUREMENT DEDUITE\n"
+" A REVERSER"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,lastest_vat_credit:0
+msgid " Vat credit of last month"
+msgstr " Crédit de TVA du mois dernier"
+
+#. module: l10n_fisctax_civ
+#: field:trainingfund.declaration,employe_workforce:0
+msgid "01- A Workforce"
+msgstr "01 – Effectif des Salaires"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_form
+msgid "01- OPERATIONS CARRIED OUT"
+msgstr "01- OPERATIONS REALISEES"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "01- Ratepayer"
+msgstr "01 - Identification du Contribuable"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "02 -  DETERMINATION OF THE PLATE"
+msgstr "02 -  DETERMINATION DE L’ASSIETTE"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "02 – DETERMINATION OF TAXES"
+msgstr "02 – DETERMINATION DES TAXES"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_form
+msgid "02- Gross VAT"
+msgstr "02-  TVA BRUTE"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "03 - DETERMINATION OF TAX"
+msgstr "03 -  DETERMINATION DE L’IMPOT"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "03- ANNUAL STANDARDIZATION"
+msgstr "03- REGULARISATION ANNULLE"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_form
+msgid "03-REGULARIZATION VAT"
+msgstr "03 - REGULARISATION TVA"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "03.1 - TAXES WITHDRAWN ON SALARIES"
+msgstr "03.1 -  IMPOTS RETENUS SUR LES SALAIRES"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "03.2- CONTRIBUTIONS PAYABLE TO THE EMPLOYER"
+msgstr "03.2 - CONTRIBUTIONS A LA CHARGE DE L’EMPLOYEUR"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "03.3 - SPECIFIC RETENTION OF THE FOREST REGIME IN CASE OF CLOSURE"
+msgstr "03.3 - RETENUE SPECIFIQUE DU REGIME FORESTIER EN CAS DE FERMAGE"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "03.4 - ACCRUED"
+msgstr "03.4 - REGULARISATION"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "2.1- LEARNING TAX (TA)"
+msgstr ""
+"2.1- TAXE D'APPRENTISSAGE (TA)\n"
+")"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "2.2- TAX ON CONTINUING EDUCATION (TFC)"
+msgstr "2.2- TAXE A LA FORMATION CONTINUE (TFC)"
+
+#. module: l10n_fisctax_civ
+#: field:trainingfund.declaration,total_amount_tfcsf:0
+msgid "2.3- Cumulative TFC from year begin(3)"
+msgstr ""
+"2.3- Montant cumulé de la TFC conservée\n"
+"depuis le début de l’année(3)"
+
+#. module: l10n_fisctax_civ
+#: field:trainingfund.declaration,employe_workforce_asf:0
+msgid "3.1 – Yearly Workforce"
+msgstr "3.1 – Masse salariale annuelle"
+
+#. module: l10n_fisctax_civ
+#: field:trainingfund.declaration,amount_tcfsf:0
+msgid "3.2 – Monthly amount TFC (3.1 x 1,2 %)"
+msgstr "3.2 – Montant annuel de la TFC (3.1 x 1,2 %)"
+
+#. module: l10n_fisctax_civ
+#: field:trainingfund.declaration,amount_pay_tcfsf:0
+msgid "3.3 -Total TFC amount pay during this year (2.3)"
+msgstr ""
+"3.3 - Montant total de la TFC payée\n"
+"au cours de l’année (2.3)"
+
+#. module: l10n_fisctax_civ
+#: field:trainingfund.declaration,engagement_tpsf:0
+msgid "3.4 - Commitment on FDFP Plan (direct use)"
+msgstr ""
+"3.4 - Engagement sur plans agréés\n"
+"par le FDFP (utilisation directe)"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_tree
+#: field:trainingfund.declaration,payment:0
+msgid "3.5- Payment if |3.2| is under |3.3| + |3.4|"
+msgstr ""
+"3.5- Versement à effectuer \n"
+"si |3.2| est supérieur à |3.3| + |3.4|"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_tree
+#: field:vat.declaration,vat_gross_total:0
+msgid "4 - VAT GROSS TOTAL"
+msgstr "4 - TOTAL TVA BRUTE"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "AMOUNT ( In Francs CFA)"
+msgstr "MONTANT ( En Francs CFA)"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "AMOUNT TO BE REPORTED"
+msgstr "MONTANT A REPORTER"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_form
+msgid "AMOUNTS"
+msgstr "MONTANTS"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_tree
+#: field:trainingfund.declaration,payment_todo:0
+msgid "AMOUT TOTAL TO PAY (FDFP)"
+msgstr "MONTANT TOTAL A PAYER (FDFP)"
+
+#. module: l10n_fisctax_civ
+#: field:res.company,act_code:0 field:socialfund.declaration,activity_code:0
+msgid "Activity Code"
+msgstr "Code d'Activité"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_form
+msgid "Adds The Deductibles VAT Statement"
+msgstr "Ajout des elements des taxes déductbles TVA"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Agricultural regime"
+msgstr "Régime agricole"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,allowance_1:0
+msgid "Allowance 1"
+msgstr "Allowance 1"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,minimal_rate_vat_amount:0
+#: field:vat.declaration,normal_rate_vat_amount:0
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Amount"
+msgstr "Montant"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_form
+#: field:deductiblevat.statement.lines,amount:0
+msgid "Amount Total"
+msgstr "Amount Total"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_a:0
+msgid "Amount a"
+msgstr "Amount a"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_an:0
+msgid "Amount an"
+msgstr "Amount an"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_exo1:0
+msgid "Amount exo1"
+msgstr "Amount exo1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_exo2:0
+msgid "Amount exo2"
+msgstr "Amount exo2"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_exo3:0
+msgid "Amount exo3"
+msgstr "Amount exo3"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_exo4:0
+msgid "Amount exo4"
+msgstr "Amount exo4"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Amount exonerated"
+msgstr "Montant exoneré"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Amount of wages (less than minimum) 2 not stated or not taxed"
+msgstr "Montant des salaires (inférieurs au minimum)2 non déclaré ou non imposé"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_rv:0
+msgid "Amount rv"
+msgstr "Amount rv"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_tree
+#: field:wagetax.declaration,amount_tp:0
+msgid "Amount to pay"
+msgstr "MONTANT TOTAL A PAYER"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_tree
+#: field:wagetax.declaration,amount_tr:0
+msgid "Amount to report"
+msgstr "MONTANT A REPORTER"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_tv1:0
+msgid "Amount tv1"
+msgstr "Amount tv1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_tv2:0
+msgid "Amount tv2"
+msgstr "Amount tv2"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_tv3:0
+msgid "Amount tv3"
+msgstr "Amount tv3"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,amount_tv4:0
+msgid "Amount tv4"
+msgstr "Amount tv4"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Annual Tax"
+msgstr "taux annuel"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,annual_tax:0
+msgid "Annual Tax ( in %)"
+msgstr "Annual Tax ( in %)"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement.lines,annual_tax:0
+msgid "Annual tax (In %)"
+msgstr "Annual tax (In %)"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "April"
+msgstr "Avril"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "August"
+msgstr "Août"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,totalamount:0
+msgid "BULLY AMOUNT TOTAL IN THIS PERIOD"
+msgstr "TOTAL SALAIRES BRUTS PAYÉS AU COURS DE LA PÉRIODE"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,base_1:0
+msgid "Base 1"
+msgstr "Base 1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,base_2:0
+msgid "Base 2"
+msgstr "Base 2"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,base_3:0
+msgid "Base 3"
+msgstr "Base 3"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Benefits in kind (evaluation)"
+msgstr "Avantages en nature (évaluation)"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "CATEGORY OF WAGES"
+msgstr "CATÉGORIES DE SALAIRES"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "CONTRIBUTIONS FROM CONTRIBUTIONS DUES"
+msgstr "DÉCOMPTE DES COTISATIONS DUES"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "CONTRIBUTIONS PAYABLE TO THE EMPLOYER TOTAL"
+msgstr "CONTRIBUTIONS PAYABLE TO THE EMPLOYER TOTAL"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Class of employees"
+msgstr "Catégorie de salariés"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.report.file:l10n_fisctax_civ.deductiblevat_xls_form
+#: view:eq_specialtax.report.file:l10n_fisctax_civ.eq_specialtax_xls_form
+#: view:socialfund.report.file:l10n_fisctax_civ.socialfund_xls_form
+#: view:trainingfund.report.file:l10n_fisctax_civ.trainingfund_xls_form
+#: view:vat.report.file:l10n_fisctax_civ.vat_xls_form
+#: view:wagetax.report.file:l10n_fisctax_civ.wagetax_xls_form
+msgid "Close"
+msgstr "Fermer"
+
+#. module: l10n_fisctax_civ
+#: model:ir.model,name:l10n_fisctax_civ.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,company_id:0
+msgid "Company"
+msgstr "Raison Social"
+
+#. module: l10n_fisctax_civ
+#: field:res.company,objet:0 field:wagetax.declaration,company_goal:0
+msgid "Company Goal"
+msgstr "Objet ou activité"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,company_id:0
+#: field:eq.specialtax.declaration,company_id:0
+#: field:trainingfund.declaration,company_id:0
+#: field:vat.declaration,company_id:0 field:wagetax.declaration,company_id:0
+msgid "Company Name"
+msgstr "Sociétés"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,contribution_e:0
+msgid "Contribution e"
+msgstr "Contribution e"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_tree
+#: field:socialfund.declaration,pf3:0
+msgid "Contribution for familly prestations"
+msgstr "Cotisation due Prestations Familiales"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_tree
+#: field:socialfund.declaration,rr3:0
+msgid "Contribution for pension plan"
+msgstr "Cotisation due Régime de Retraite"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_tree
+#: field:socialfund.declaration,at3:0
+msgid "Contribution for work accident"
+msgstr "Cotisation due Accidents du Travail"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,contribution_n:0
+msgid "Contribution n"
+msgstr "Contribution n"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,contribution_nce:0
+msgid "Contribution nce"
+msgstr "Contribution nce"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,conv_ops_exempt_vat_revenu:0
+msgid "Conventional Exempt operation to deduct (join autorisation)"
+msgstr ""
+"Opérations exonérées conventionnelles\n"
+" (joindre attestations) A déduire"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,create_uid:0
+#: field:deductiblevat.statement,create_uid:0
+#: field:deductiblevat.statement.lines,create_uid:0
+#: field:eq.specialtax.declaration,create_uid:0
+#: field:eq_specialtax.report.file,create_uid:0
+#: field:socialfund.declaration,create_uid:0
+#: field:socialfund.report.file,create_uid:0
+#: field:trainingfund.declaration,create_uid:0
+#: field:trainingfund.report.file,create_uid:0
+#: field:vat.declaration,create_uid:0 field:vat.report.file,create_uid:0
+#: field:wagetax.declaration,create_uid:0
+#: field:wagetax.report.file,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,create_date:0
+#: field:deductiblevat.statement,create_date:0
+#: field:deductiblevat.statement.lines,create_date:0
+#: field:eq.specialtax.declaration,create_date:0
+#: field:eq_specialtax.report.file,create_date:0
+#: field:socialfund.declaration,create_date:0
+#: field:socialfund.report.file,create_date:0
+#: field:trainingfund.declaration,create_date:0
+#: field:trainingfund.report.file,create_date:0
+#: field:vat.declaration,create_date:0 field:vat.report.file,create_date:0
+#: field:wagetax.declaration,create_date:0
+#: field:wagetax.report.file,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,csbsctrpf:0
+msgid "Cumulative gross wages contribution for familly benefit and work accident"
+msgstr "Cumul salaires bruts soumis à cotisations au titre des Regimes de Prest Famil. et des Accid. du Travail"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,csbsactrr:0
+msgid "Cumulative gross wages contribution for pension plan."
+msgstr "Cumul salaires bruts soumis à cotisation au titre du Regime de Retraite."
+
+#. module: l10n_fisctax_civ
+#: model:ir.ui.menu,name:l10n_fisctax_civ.section_main_menu_declaration
+msgid "DECLARATION CI"
+msgstr "DECLARATION CI"
+
+#. module: l10n_fisctax_civ
+#: view:eq.specialtax.declaration:l10n_fisctax_civ.eq_specialtax_form
+msgid "DECLARATION TSE : Form"
+msgstr "DECLARATION TSE : Form"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Daily and occasional hours less than or equal to 3231 F day"
+msgstr ""
+"Horaires journaliers et occasionnels inférieurs\n"
+"ou égaux à 3231 F jour"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Daily and occasional times greater than or equal to 3231 F day"
+msgstr "Horaires journaliers et occasionnels supérieurs à 3231 F par jour"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,date:0 field:eq.specialtax.declaration,date:0
+#: field:socialfund.declaration,date:0 field:trainingfund.declaration,date:0
+#: field:vat.declaration,date:0 field:wagetax.declaration,date:0
+msgid "Date"
+msgstr "Date"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "December"
+msgstr "Décembre"
+
+#. module: l10n_fisctax_civ
+#: model:ir.ui.menu,name:l10n_fisctax_civ.declaration
+msgid "Declarartion CI"
+msgstr "Déclarartion CI"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_form
+#: field:deductiblevat.statement.lines,deductible_vat_amount:0
+msgid "Deductible VAT Amount"
+msgstr ""
+"MONTANT \n"
+"DE LA TAXE\n"
+"DEDUCTIBLE"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_tree
+#: model:ir.actions.act_window,name:l10n_fisctax_civ.action_deductiblevat
+#: model:ir.ui.menu,name:l10n_fisctax_civ.choix_deductiblevat
+msgid "Deductible VAT Statement"
+msgstr "Etats des taxes deductibles TVA"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_form
+msgid "Deductible VAT Statement Form"
+msgstr "Etat des taxes déductible TVA Form"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement.lines:l10n_fisctax_civ.deductiblevatstatementlines_form
+msgid "Deductible VAT Statement Lines Form"
+msgstr "Ligne des element des etats de taxes déductible TAV  Form"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,deductible_vat_amount:0
+msgid "Deductible vat statement"
+msgstr "Etats des taxes deductibles TVA"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_form
+#: field:deductiblevat.statement.lines,deduction_rate:0
+msgid "Deduction Rate"
+msgstr ""
+"PRORATA \n"
+"DE\n"
+"DEDUCTION"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement.lines,goods_definition:0
+msgid "Definition of Goods or Services (subject to deduction)"
+msgstr ""
+"NATURE DES  BIENS\n"
+" OU SERVICES (ouvrant droit à déduction)"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Dejection"
+msgstr "Abattement"
+
+#. module: l10n_fisctax_civ
+#: field:eq.specialtax.declaration,delivery_onself_revenu:0
+#: field:vat.declaration,vat_delivery_onself_revenu:0
+msgid "Delivery Oneself Revenu to deduct"
+msgstr ""
+"A ajouter :Livraisons à \n"
+" soi-même taxables"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,difference:0
+msgid "Difference"
+msgstr "Différence"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,display_name:0
+#: field:deductiblevat.statement,display_name:0
+#: field:deductiblevat.statement.lines,display_name:0
+#: field:eq.specialtax.declaration,display_name:0
+#: field:eq_specialtax.report.file,display_name:0
+#: field:socialfund.declaration,display_name:0
+#: field:socialfund.report.file,display_name:0
+#: field:trainingfund.declaration,display_name:0
+#: field:trainingfund.report.file,display_name:0
+#: field:vat.declaration,display_name:0 field:vat.report.file,display_name:0
+#: field:wagetax.declaration,display_name:0
+#: field:wagetax.report.file,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: l10n_fisctax_civ
+#: field:res.company,quartier:0 field:wagetax.declaration,district:0
+msgid "District"
+msgstr "Quartier"
+
+#. module: l10n_fisctax_civ
+#: selection:deductiblevat.statement,state:0
+#: selection:eq.specialtax.declaration,state:0
+#: selection:socialfund.declaration,state:0
+#: selection:trainingfund.declaration,state:0 selection:vat.declaration,state:0
+#: selection:wagetax.declaration,state:0
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.server,name:l10n_fisctax_civ.trainingfund_report_action
+msgid "Drownload the excel file of Training Fund"
+msgstr "Télécharger le fichier excel de FDFP"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.server,name:l10n_fisctax_civ.wagetax_report_action
+msgid "Drownload the excel file of Wagetax"
+msgstr "Télécharger le fichier excel de ITS"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.server,name:l10n_fisctax_civ.eq_specialtax_report_action
+msgid "Drownload the excel file of eq special tax"
+msgstr "Télécharger le fichier excel de TSE"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.server,name:l10n_fisctax_civ.socialfund_report_action
+msgid "Drownload the excel file of social fund declaration"
+msgstr "Télécharger le fichier excel de CNPS"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.server,name:l10n_fisctax_civ.vat_report_action
+msgid "Drownload the excel file of vat"
+msgstr "Télécharger le fichier excel de TVA"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.server,name:l10n_fisctax_civ.deductiblevat_report_action
+msgid "Drownload the file of Deductible VAT Statement"
+msgstr "Télecharger le fichier  excel des  Etats des taxes deductibles TVA"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Effective"
+msgstr "Effectif"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Effectives"
+msgstr "Effectifs"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,email:0
+msgid "Email"
+msgstr "Email"
+
+#. module: l10n_fisctax_civ
+#: field:res.company,employeur:0 field:socialfund.declaration,employer:0
+msgid "Employer"
+msgstr "N° Employeur"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Employer Contribution"
+msgstr "Contribution Employeur"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Employer Contribution (EC)"
+msgstr "Contribution Employeur (CE)"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Employer contribution (EC)"
+msgstr "Employer contribution (EC)"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_tree
+#: field:wagetax.declaration,totalcontribution:0
+msgid "Employer total contribution"
+msgstr "TOTAL DES CONTRIBUTIONS A LA CHARGE DE L’EMPLOYEUR"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.act_window,name:l10n_fisctax_civ.action_eq_specialtax
+#: model:ir.ui.menu,name:l10n_fisctax_civ.choix_eq_specialtax
+msgid "Eq Special Tax"
+msgstr "TSE"
+
+#. module: l10n_fisctax_civ
+#: view:eq.specialtax.declaration:l10n_fisctax_civ.eq_specialtax_tree
+msgid "Eq Special Tax declaration : Tab"
+msgstr "Déclaration TSE : Tab"
+
+#. module: l10n_fisctax_civ
+#: field:res.company,code_et:0 field:socialfund.declaration,code_ets:0
+msgid "Etablishment Code"
+msgstr "Code d'Etablissemment"
+
+#. module: l10n_fisctax_civ
+#: field:eq.specialtax.declaration,ops_exempt_tax_revenu:0
+msgid "Exempt Tax Operations (Oil Products) to deduct"
+msgstr "Opérations exonérées (produits pétroliers) A DEDUIRE"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Expatriate staff (General scheme)"
+msgstr "Personnel expatrié (Régime général)"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.report.file:l10n_fisctax_civ.deductiblevat_xls_form
+msgid "Export Deductible VAT Statement file"
+msgstr "Export Deductible VAT Statement file"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.report.file:l10n_fisctax_civ.trainingfund_xls_form
+msgid "Export Training Fund file"
+msgstr "Exportation du fichier FDFP"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,export_deduction:0
+msgid "Export deduction"
+msgstr "Exportations A déduire"
+
+#. module: l10n_fisctax_civ
+#: view:eq_specialtax.report.file:l10n_fisctax_civ.eq_specialtax_xls_form
+msgid "Export eq_special tax file"
+msgstr "Exporter le fichier TSE"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.report.file:l10n_fisctax_civ.socialfund_xls_form
+msgid "Export socialfund file"
+msgstr "Exporter le fichier CNPS"
+
+#. module: l10n_fisctax_civ
+#: view:vat.report.file:l10n_fisctax_civ.vat_xls_form
+msgid "Export vat file"
+msgstr "Exporter le fichier TVA"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.report.file:l10n_fisctax_civ.wagetax_xls_form
+msgid "Export wagetax file"
+msgstr "Exporter le fichier ITS"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "FAMILY BENEFITS AND ACCIDENTS OF WORK"
+msgstr "REGIMES DES PREST. FAMIL ET DES ACCID. DU TRAVAIL"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Family benefits"
+msgstr "Prestations Familiales"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "February"
+msgstr "Février"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,file:0
+#: field:eq_specialtax.report.file,file:0 field:socialfund.report.file,file:0
+#: field:trainingfund.report.file,file:0 field:vat.report.file,file:0
+#: field:wagetax.report.file,file:0
+msgid "File"
+msgstr "Fichier"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,file_name:0
+#: field:eq_specialtax.report.file,file_name:0
+#: field:socialfund.report.file,file_name:0
+#: field:trainingfund.report.file,file_name:0 field:vat.report.file,file_name:0
+#: field:wagetax.report.file,file_name:0
+msgid "File Name"
+msgstr "Nom du fichier"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "General Income Tax (GTI)"
+msgstr "Impôt général sur le revenu (IGR)"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "General income tax"
+msgstr "General income tax"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Gross amount"
+msgstr "Montant brut"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Gross income"
+msgstr "Revenus bruts"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Gross total amount"
+msgstr "Montant total brut"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_tree
+#: field:wagetax.declaration,amount_tb:0
+msgid "Gross total revenu"
+msgstr "Montant total Revenus brut"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Gross wages"
+msgstr "Salaires Bruts"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,id:0 field:deductiblevat.statement,id:0
+#: field:deductiblevat.statement.lines,id:0
+#: field:eq.specialtax.declaration,id:0 field:eq_specialtax.report.file,id:0
+#: field:socialfund.declaration,id:0 field:socialfund.report.file,id:0
+#: field:trainingfund.declaration,id:0 field:trainingfund.report.file,id:0
+#: field:vat.declaration,id:0 field:vat.report.file,id:0
+#: field:wagetax.declaration,id:0 field:wagetax.report.file,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "ITS"
+msgstr "ITS"
+
+#. module: l10n_fisctax_civ
+#: field:res.company,sigle:0 field:wagetax.declaration,initials:0
+msgid "Initials"
+msgstr "Sigle"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement.lines,document_ref:0
+msgid "Invoice or Document Reference"
+msgstr ""
+"REFERENCE DE LA \n"
+" FACTURE OU N° DE LA DECLARATION\n"
+" ET DE LA LIQUIDATION EN DOUANE"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement.lines,date:0
+msgid "Invoice or document date"
+msgstr ""
+"DATE de la facture\n"
+"  ou de l'importation"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "January"
+msgstr "Janvier"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month3:0
+msgid "Juin"
+msgstr "Juin"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "July"
+msgstr "Juillet"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "June"
+msgstr "Juin"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "LIFE ANNUITIES"
+msgstr "RENTES VIAGERES"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,__last_update:0
+#: field:deductiblevat.statement,__last_update:0
+#: field:deductiblevat.statement.lines,__last_update:0
+#: field:eq.specialtax.declaration,__last_update:0
+#: field:eq_specialtax.report.file,__last_update:0
+#: field:socialfund.declaration,__last_update:0
+#: field:socialfund.report.file,__last_update:0
+#: field:trainingfund.declaration,__last_update:0
+#: field:trainingfund.report.file,__last_update:0
+#: field:vat.declaration,__last_update:0 field:vat.report.file,__last_update:0
+#: field:wagetax.declaration,__last_update:0
+#: field:wagetax.report.file,__last_update:0
+msgid "Last Modified on"
+msgstr "Dernière Modification du"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,write_uid:0
+#: field:deductiblevat.statement,write_uid:0
+#: field:deductiblevat.statement.lines,write_uid:0
+#: field:eq.specialtax.declaration,write_uid:0
+#: field:eq_specialtax.report.file,write_uid:0
+#: field:socialfund.declaration,write_uid:0
+#: field:socialfund.report.file,write_uid:0
+#: field:trainingfund.declaration,write_uid:0
+#: field:trainingfund.report.file,write_uid:0 field:vat.declaration,write_uid:0
+#: field:vat.report.file,write_uid:0 field:wagetax.declaration,write_uid:0
+#: field:wagetax.report.file,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.report.file,write_date:0
+#: field:deductiblevat.statement,write_date:0
+#: field:deductiblevat.statement.lines,write_date:0
+#: field:eq.specialtax.declaration,write_date:0
+#: field:eq_specialtax.report.file,write_date:0
+#: field:socialfund.declaration,write_date:0
+#: field:socialfund.report.file,write_date:0
+#: field:trainingfund.declaration,write_date:0
+#: field:trainingfund.report.file,write_date:0
+#: field:vat.declaration,write_date:0 field:vat.report.file,write_date:0
+#: field:wagetax.declaration,write_date:0
+#: field:wagetax.report.file,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière mise à jour du"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,legal_ops_exempt_vat_revenu:0
+msgid "Legal Exempt operations to deduct"
+msgstr "Opérations exonérées légales A déduire"
+
+#. module: l10n_fisctax_civ
+#: help:vat.declaration,deductible_vat_amount:0
+msgid "Linked Deductible vat statement (optional). Usually created when converting the Deductible vat statement."
+msgstr "Linked Deductible vat statement (optional). Usually created when converting the Deductible vat statement."
+
+#. module: l10n_fisctax_civ
+#: help:vat.declaration,company_id:0
+msgid "Linked company (optional). Usually created when converting the VAT."
+msgstr "Linked company (optional). Usually created when converting the VAT."
+
+#. module: l10n_fisctax_civ
+#: help:deductiblevat.statement,company_id:0
+msgid "Linked company (optional). Usually created when converting the deductiblevat."
+msgstr "Linked company (optional). Usually created when converting the deductiblevat."
+
+#. module: l10n_fisctax_civ
+#: help:eq.specialtax.declaration,company_id:0
+msgid "Linked company (optional). Usually created when converting the eq_specialtax."
+msgstr "Linked company (optional). Usually created when converting the eq_specialtax."
+
+#. module: l10n_fisctax_civ
+#: help:socialfund.declaration,company_id:0
+msgid "Linked company (optional). Usually created when converting the socialfund."
+msgstr "Linked company (optional). Usually created when converting the socialfund."
+
+#. module: l10n_fisctax_civ
+#: help:trainingfund.declaration,company_id:0
+msgid "Linked company (optional). Usually created when converting the trainingfund."
+msgstr "Linked company (optional). Usually created when converting the trainingfund."
+
+#. module: l10n_fisctax_civ
+#: help:wagetax.declaration,company_id:0
+msgid "Linked company (optional). Usually created when converting the wagetax."
+msgstr "Linked company (optional). Usually created when converting the wagetax."
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Local presonnel (General scheme)"
+msgstr "Personnel local (Régime général)"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "MONTHLY AMOUNT"
+msgstr "MONTANT MENSUEL"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_tree
+#: field:trainingfund.declaration,monthly_amount_tfcsf:0
+msgid "MONTHLY AMOUNT (TFC)"
+msgstr "MONTANT MENSUEL FPC"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_tree
+#: field:trainingfund.declaration,monthly_amount_tatf:0
+msgid "MONTHLY APPRENTICESHIP TAX AMOUNT"
+msgstr "MONTANT MENSUEL TA"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "March"
+msgstr "Mars"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "May"
+msgstr "Mai"
+
+#. module: l10n_fisctax_civ
+#: selection:deductiblevat.statement,periodicity:0
+#: selection:eq.specialtax.declaration,periodicity:0
+#: selection:socialfund.declaration,periodicity:0
+#: selection:trainingfund.declaration,periodicity:0
+#: selection:vat.declaration,periodicity:0
+#: selection:wagetax.declaration,periodicity:0
+msgid "Monthly"
+msgstr "Mensuel"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,monthly_deductible_vat:0
+msgid "Monthly deductible vat"
+msgstr "Taxes déductibles du mois"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Monthly less than or equal to 70,000 f per month"
+msgstr "Mensuels inférieurs ou égaux à 70.000 f par mois"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Monthly over 70,000 F. per month and less than or equal to 1,647,315 F. per month"
+msgstr "Mensuels supérieurs à 70.000 F. par mois et inférieurs ou égaux à 1.647.315 F. par mois"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Monthly rates over 1,647,315 F. per month"
+msgstr "Mensuels supérieurs à 1.647.315 F. par mois"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "NATURE OF TAXES"
+msgstr "NATURE DES TAXES"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "NUMBER OF WAGES"
+msgstr "NOMBRE DE SALARIES"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,name:0 field:eq.specialtax.declaration,name:0
+#: field:socialfund.declaration,name:0 field:trainingfund.declaration,name:0
+#: field:vat.declaration,name:0 field:wagetax.declaration,name:0
+msgid "Name"
+msgstr "Nom"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "National contribution (CN)"
+msgstr "Contribution nationale (CN)"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "National contribution payable by the employer (CN)"
+msgstr "Contribution nationale à la charge de l'employeur (CN)"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Natrue taxes"
+msgstr "Natrue taxes"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Nature of taxes"
+msgstr "Nature des impôts"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,netrevenu_1:0
+msgid "Netrevenu 1"
+msgstr "Netrevenu 1"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Non-taxable benefits"
+msgstr "Indemnités non imposables"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Non-taxable income"
+msgstr "Revenus non imposables"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "November"
+msgstr "Novembre"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Numbers"
+msgstr "Nombres"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "N°"
+msgstr "N°"
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "October"
+msgstr "Octobre"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,element_statement_ids:0
+msgid "Order Lines"
+msgstr "Ajouter un element"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_form
+msgid "Order lines"
+msgstr "Ajouter un élement"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Other (s) to be specified)"
+msgstr "Autres (à préciser)"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,other_non_vat_revenu:0
+msgid "Others Exempt operations to deduct"
+msgstr "Autres opérations non taxables A déduire"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,pobox:0
+msgid "P.O Box"
+msgstr "BP"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "PENSION PLAN"
+msgstr "REGIME DE RETRAITE"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "PENSIONS"
+msgstr "PENSIONS"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Pension > 300,000 FCFA"
+msgstr "Pension > 300,000 FCFA"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Pension plan"
+msgstr "Régime de Retraite"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Pensions ≤ 300.000 FCFA / month"
+msgstr "Pensions ≤ 300.000 FCFA/mois"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "People not contributing to the Retirement Plan"
+msgstr "Personnes ne cotisant pas au Regime de Retraite"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,periodicity:0
+#: field:eq.specialtax.declaration,periodicity:0
+#: field:socialfund.declaration,periodicity:0
+#: field:trainingfund.declaration,periodicity:0
+#: field:vat.declaration,periodicity:0
+msgid "Periodicity"
+msgstr "Periodicité"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,periodicity:0
+msgid "Periodicité"
+msgstr "Periodicité"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Persons for whom the employer does not contribute"
+msgstr "Personnes pour qui l'employeur ne cotise pas"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,phone:0 field:wagetax.declaration,phone:0
+msgid "Phone"
+msgstr "Tel"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_form
+msgid "RATE ( In %)"
+msgstr "TAUX ( En %)"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "RATE (In %)"
+msgstr "TAUX ( En %)"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "RATE(In %)"
+msgstr "TAUX ( En %)"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,minimal_rate:0 field:vat.declaration,normal_rate:0
+msgid "Rate"
+msgstr "Taux (En %)"
+
+#. module: l10n_fisctax_civ
+#: field:eq.specialtax.declaration,rate:0
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Rate (In %)"
+msgstr "Taux ( En %)"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,rate_e1:0
+msgid "Rate e1"
+msgstr "Rate e1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,rate_e2:0
+msgid "Rate e2"
+msgstr "Rate e2"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,rate_e3:0
+msgid "Rate e3"
+msgstr "Rate e3"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,rate_e4:0
+msgid "Rate e4"
+msgstr "Rate e4"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,rate_e5:0
+msgid "Rate e5"
+msgstr "Rate e5"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,rate_re:0
+msgid "Rate re"
+msgstr "Rate re"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,rateimpot1:0
+msgid "Rateimpot1"
+msgstr "Rateimpot1"
+
+#. module: l10n_fisctax_civ
+#: field:eq.specialtax.declaration,regulation:0
+msgid "Regularisation"
+msgstr "Régularisation"
+
+#. module: l10n_fisctax_civ
+#: field:trainingfund.declaration,regulation_state_sf:0
+msgid "Regularistion Inside ?"
+msgstr "Prise en compte régularisation ?"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Remuneration paid"
+msgstr "Rémunérations versées"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Retention of income of loggers as tenant"
+msgstr "Retenue sur le revenu des exploitants forestiers à titre de fermage"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Revenu net imposable"
+msgstr "Revenu net imposable"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,revenu_netimp:0
+msgid "Revenu netimp"
+msgstr "Revenu netimp"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,revenu_nii1:0
+msgid "Revenu nii1"
+msgstr "Revenu nii1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,revenu_nii2:0
+msgid "Revenu nii2"
+msgstr "Revenu nii2"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,revenu_nii3:0
+msgid "Revenu nii3"
+msgstr "Revenu nii3"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,revenu_nii4:0
+msgid "Revenu nii4"
+msgstr "Revenu nii4"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,revenu_nii5:0
+msgid "Revenu nii5"
+msgstr "Revenu nii5"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,minimal_rate_revenu_amount:0
+#: field:vat.declaration,normal_rate_revenu_amount:0
+msgid "Revenu without tax"
+msgstr "Revenu without tax"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "SALARY SUBMITTED TO CONTRIBUTIONS"
+msgstr "SALAIRES SOUMIS A COTISATIONS"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "SECTIONS"
+msgstr "RUBRIQUES"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Salary Tax (ST)"
+msgstr "Impôts sur salaires (IS)"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.report.file:l10n_fisctax_civ.deductiblevat_xls_form
+#: view:vat.report.file:l10n_fisctax_civ.vat_xls_form
+msgid "Sauve the file in excel format ' .'xls' ."
+msgstr "Enregistrement du fichier  sous format excel'.'xls'."
+
+#. module: l10n_fisctax_civ
+#: view:eq_specialtax.report.file:l10n_fisctax_civ.eq_specialtax_xls_form
+#: view:socialfund.report.file:l10n_fisctax_civ.socialfund_xls_form
+#: view:trainingfund.report.file:l10n_fisctax_civ.trainingfund_xls_form
+#: view:wagetax.report.file:l10n_fisctax_civ.wagetax_xls_form
+msgid "Save the file in  excel format ' .'xls' ."
+msgstr "Enregistrement du fichier sous format excel'.'xls'."
+
+#. module: l10n_fisctax_civ
+#: selection:socialfund.declaration,month:0
+#: selection:socialfund.declaration,month1:0
+#: selection:socialfund.declaration,month2:0
+#: selection:socialfund.declaration,month3:0
+#: selection:socialfund.declaration,month4:0
+#: selection:socialfund.declaration,month5:0
+msgid "September"
+msgstr "Septembre"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.act_window,name:l10n_fisctax_civ.action_socialfund
+#: model:ir.ui.menu,name:l10n_fisctax_civ.choix_socialfund
+msgid "Social Fund"
+msgstr "CNPS"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Social Fund Form"
+msgstr "CNPS Form"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,state:0
+#: field:eq.specialtax.declaration,state:0 field:socialfund.declaration,state:0
+#: field:trainingfund.declaration,state:0 field:vat.declaration,state:0
+#: field:wagetax.declaration,state:0
+msgid "State"
+msgstr "Status"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,address:0 field:wagetax.declaration,street:0
+msgid "Street"
+msgstr "Adresse"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,street2:0
+msgid "Street 2"
+msgstr "Rue"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement.lines,supplier:0
+msgid "Supplier Name"
+msgstr ""
+"FOURNISSEUR NOM\n"
+" ET PRENOMS"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement.lines,supplier_taxt_code:0
+msgid "Supplier Tax ID"
+msgstr ""
+"FOURNISSEUR\n"
+" N° C. C"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "TOTAL"
+msgstr "TOTAL"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "TOTAL AMOUNT TO PAY"
+msgstr "MONTANT TOTAL A PAYER"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_tree
+#: field:socialfund.declaration,tcap:0
+msgid "TOTAL CONTRIBUTION TO PAY"
+msgstr "TOTAL COTISATIONS A PAYER"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_tree
+#: field:vat.declaration,deductible_vat_total:0
+msgid "TOTAL DEDUCTION"
+msgstr "DEDUCTION TOTAL"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "TOTAL DEDUCTIONS TO EMPLOYEES"
+msgstr "TOTAL DES RETENUES AUX SALARIES"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "TOTAL GROSS REMUNERATION"
+msgstr "REMUNERATIONS BRUTES TOTALES"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "TOTAL NET AMOUNT IMPOSABLE"
+msgstr "TOTAL MONTANT NET IMPOSABLE"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,tax:0
+msgid "Tax"
+msgstr "Tax"
+
+#. module: l10n_fisctax_civ
+#: field:eq.specialtax.declaration,tax_amount:0
+msgid "Tax Amount"
+msgstr "Montant Taxable"
+
+#. module: l10n_fisctax_civ
+#: view:eq.specialtax.declaration:l10n_fisctax_civ.eq_specialtax_tree
+#: field:eq.specialtax.declaration,amount_topay:0
+msgid "Tax Amount to pay"
+msgstr "Montant de la  Taxe à payer"
+
+#. module: l10n_fisctax_civ
+#: view:eq.specialtax.declaration:l10n_fisctax_civ.eq_specialtax_tree
+#: field:eq.specialtax.declaration,amount_toreport:0
+msgid "Tax Amount to report"
+msgstr "Montant de la taxe à reporter"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,company_tax_code:0
+#: field:eq.specialtax.declaration,company_tax_code:0
+#: field:socialfund.declaration,company_tax_code:0
+#: field:trainingfund.declaration,company_tax_code:0
+#: field:vat.declaration,company_tax_code:0
+#: field:wagetax.declaration,company_tax_code:0
+msgid "Tax ID"
+msgstr "NCC"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,tax_period:0
+#: field:eq.specialtax.declaration,tax_period:0
+#: field:res.company,impot_period:0 field:socialfund.declaration,tax_period:0
+#: field:trainingfund.declaration,tax_period:0
+#: field:vat.declaration,tax_period:0 field:wagetax.declaration,tax_period:0
+msgid "Tax Period"
+msgstr "Période d'Imposition"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement,tax_service:0
+#: field:eq.specialtax.declaration,tax_service:0 field:res.company,service:0
+#: field:socialfund.declaration,tax_service:0
+#: field:trainingfund.declaration,tax_service:0
+#: field:vat.declaration,tax_service:0 field:wagetax.declaration,tax_service:0
+msgid "Tax Service"
+msgstr "Service d'Assiette des Impôts"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Tax base"
+msgstr "Base imposable"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,tax_gsr:0
+msgid "Tax gsr"
+msgstr "Tax gsr"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Tax on salaries, wages, pensions, life annuities (IS)"
+msgstr "Impôt sur traitements, salaires, pensions, rentes viagères (IS)"
+
+#. module: l10n_fisctax_civ
+#: view:eq.specialtax.declaration:l10n_fisctax_civ.eq_specialtax_tree
+#: field:eq.specialtax.declaration,taxable_revenu:0
+msgid "Taxable Revenu"
+msgstr "CHIFFRE D'AFFAIRES TAXABLES"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Taxable amount"
+msgstr "Montant taxable"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Taxable net income"
+msgstr "Revenu net imposable"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,gross_taxable_revenu_wout_vat:0
+#: field:vat.declaration,taxable_revenu_wout_vat:0
+msgid "Taxable revenu without tax"
+msgstr "Chiffre d’affaires taxable HT"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_form
+msgid "Taxable turnover HT"
+msgstr "Taxable turnover HT"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,taxrate_1:0
+msgid "Taxrate 1"
+msgstr "Taxrate 1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,taxrate_2:0
+msgid "Taxrate 2"
+msgstr "Taxrate 2"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,taxrate_3:0
+msgid "Taxrate 3"
+msgstr "Taxrate 3"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,taxreduction_1:0
+msgid "Taxreduction 1"
+msgstr "Taxreduction 1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,taxreduction_2:0
+msgid "Taxreduction 2"
+msgstr "Taxreduction 2"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,taxreduction_3:0
+msgid "Taxreduction 3"
+msgstr "Taxreduction 3"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,taxreduction_4:0
+msgid "Taxreduction 4"
+msgstr "Taxreduction 4"
+
+#. module: l10n_fisctax_civ
+#: selection:deductiblevat.statement,state:0
+#: selection:eq.specialtax.declaration,state:0
+#: selection:socialfund.declaration,state:0
+#: selection:trainingfund.declaration,state:0 selection:vat.declaration,state:0
+#: selection:wagetax.declaration,state:0
+msgid "Termined"
+msgstr "Terminer"
+
+#. module: l10n_fisctax_civ
+#: selection:deductiblevat.statement,periodicity:0
+#: selection:eq.specialtax.declaration,periodicity:0
+#: selection:socialfund.declaration,periodicity:0
+#: selection:trainingfund.declaration,periodicity:0
+#: selection:vat.declaration,periodicity:0
+#: selection:wagetax.declaration,periodicity:0
+msgid "Termly"
+msgstr "Trimestrielle"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,month:0 field:socialfund.declaration,month1:0
+msgid "The First Month of Period"
+msgstr "1er Mois de la Période"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,month2:0 field:socialfund.declaration,month4:0
+msgid "The Second Month of Period"
+msgstr "2e Mois de la Période"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,month3:0 field:socialfund.declaration,month5:0
+msgid "The Third Month of Period"
+msgstr "3e Mois de la Période"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_tree
+#: field:deductiblevat.statement,total_statement:0
+msgid "Total"
+msgstr "Total"
+
+#. module: l10n_fisctax_civ
+#: field:eq.specialtax.declaration,revenu_wout_tax:0
+msgid "Total Revenu Without Tax"
+msgstr "Chiffre d'Affaires Total HT"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Total amount paid"
+msgstr "Montant total versé"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Total gross taxable income"
+msgstr "Revenu total brut imposable"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Total regularization"
+msgstr "Total régularisation"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_tree
+#: field:vat.declaration,revenu_wout_vat:0
+msgid "Total revenu without tax"
+msgstr "Chiffre d’affaires taxable HT"
+
+#. module: l10n_fisctax_civ
+#: field:trainingfund.declaration,amount_tax_tcfsf:0
+msgid "Total tax amount for continuous training"
+msgstr "Montant total de la taxe à la formation continue"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_tree
+#: field:wagetax.declaration,total_wr:0
+msgid "Total wage retenues"
+msgstr "TOTAL DES RETENUES AUX SALARIES"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,totalrevenu_1:0
+msgid "Totalrevenu 1"
+msgstr "Totalrevenu 1"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.act_window,name:l10n_fisctax_civ.action_trainingfund
+#: model:ir.ui.menu,name:l10n_fisctax_civ.choix_trainingfund
+msgid "Training Fund"
+msgstr "FDFP"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_tree
+msgid "Training Fund Declaration Tab"
+msgstr "Déclaration FDFP Tab"
+
+#. module: l10n_fisctax_civ
+#: view:trainingfund.declaration:l10n_fisctax_civ.trainingfund_form
+msgid "Training Fund Form"
+msgstr "Training Fund Form"
+
+#. module: l10n_fisctax_civ
+#: model:ir.ui.menu,name:l10n_fisctax_civ.choix_vat
+msgid "VAT"
+msgstr "VAT"
+
+#. module: l10n_fisctax_civ
+#: view:deductiblevat.statement:l10n_fisctax_civ.deductiblevat_form
+#: field:deductiblevat.statement.lines,vat_amount:0
+msgid "VAT Amount"
+msgstr ""
+"MONTANT \n"
+"DE LA TAXE"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_form
+msgid "VAT DECLARATION : Form"
+msgstr "DECLARATION TVA : Form"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_tree
+msgid "VAT DECLARATION : Tab"
+msgstr "DECLARATION TVA : Tab"
+
+#. module: l10n_fisctax_civ
+#: selection:deductiblevat.statement,state:0
+#: selection:eq.specialtax.declaration,state:0
+#: selection:socialfund.declaration,state:0
+#: selection:trainingfund.declaration,state:0 selection:vat.declaration,state:0
+#: selection:wagetax.declaration,state:0
+msgid "Validation"
+msgstr "Validation"
+
+#. module: l10n_fisctax_civ
+#: field:vat.declaration,credit_vat_torefund:0
+msgid "Vat credit to refund"
+msgstr "Crédit demandé en remboursement"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_tree
+#: field:vat.declaration,credit_vat_toreport:0
+msgid "Vat credit to report"
+msgstr "Crédit à reporter"
+
+#. module: l10n_fisctax_civ
+#: view:vat.declaration:l10n_fisctax_civ.vat_tree
+#: field:vat.declaration,vat_to_pay:0
+msgid "Vat to pay"
+msgstr "TVA nette à payer"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,wageamount_1:0
+msgid "Wageamount 1"
+msgstr "Wageamount 1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,wageforce_e1:0
+msgid "Wageforce e1"
+msgstr "Wageforce e1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,wageforce_e2:0
+msgid "Wageforce e2"
+msgstr "Wageforce e2"
+
+#. module: l10n_fisctax_civ
+#: model:ir.ui.menu,name:l10n_fisctax_civ.choix_wagetax
+msgid "Wagetax"
+msgstr "ITS"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_form
+msgid "Wagetax Declaration : Form"
+msgstr "Déclaration ITS : Form"
+
+#. module: l10n_fisctax_civ
+#: view:wagetax.declaration:l10n_fisctax_civ.wagetax_tree
+msgid "Wagetax Declaration : Tab"
+msgstr "Déclaration ITS : Tab"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_form
+msgid "Work accident"
+msgstr "Accidents du Travail"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,workforce_1:0
+msgid "Workforce 1"
+msgstr "Workforce 1"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,workforce_2:0
+msgid "Workforce 2"
+msgstr "Workforce 2"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,workforce_3:0
+msgid "Workforce 3"
+msgstr "Workforce 3"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,workforce_4:0
+msgid "Workforce 4"
+msgstr "Workforce 4"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,workforce_e3:0
+msgid "Workforce e3"
+msgstr "Workforce e3"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,workforce_e4:0
+msgid "Workforce e4"
+msgstr "Workforce e4"
+
+#. module: l10n_fisctax_civ
+#: field:wagetax.declaration,workforce_e5:0
+msgid "Workforce e5"
+msgstr "Workforce e5"
+
+#. module: l10n_fisctax_civ
+#: field:deductiblevat.statement.lines,element_id:0
+msgid "element_statement"
+msgstr "element_statement"
+
+#. module: l10n_fisctax_civ
+#: view:socialfund.declaration:l10n_fisctax_civ.socialfund_tree
+msgid "socialfund TAB"
+msgstr "cnpS  TAB"
+
+#. module: l10n_fisctax_civ
+#: field:socialfund.declaration,at1:0 field:socialfund.declaration,at2:0
+#: field:socialfund.declaration,hjoi3231jours1:0
+#: field:socialfund.declaration,hjoi3231jours12:0
+#: field:socialfund.declaration,hjoi3231jours13:0
+#: field:socialfund.declaration,hjoi3231jours2:0
+#: field:socialfund.declaration,hjoi3231jours22:0
+#: field:socialfund.declaration,hjoi3231jours23:0
+#: field:socialfund.declaration,hjoi3231jours3:0
+#: field:socialfund.declaration,hjoi3231jours32:0
+#: field:socialfund.declaration,hjoi3231jours33:0
+#: field:socialfund.declaration,hjos3231jours1:0
+#: field:socialfund.declaration,hjos3231jours12:0
+#: field:socialfund.declaration,hjos3231jours13:0
+#: field:socialfund.declaration,hjos3231jours2:0
+#: field:socialfund.declaration,hjos3231jours22:0
+#: field:socialfund.declaration,hjos3231jours23:0
+#: field:socialfund.declaration,hjos3231jours3:0
+#: field:socialfund.declaration,hjos3231jours32:0
+#: field:socialfund.declaration,hjos3231jours33:0
+#: field:socialfund.declaration,mi70000mois1:0
+#: field:socialfund.declaration,mi70000mois12:0
+#: field:socialfund.declaration,mi70000mois13:0
+#: field:socialfund.declaration,mi70000mois2:0
+#: field:socialfund.declaration,mi70000mois22:0
+#: field:socialfund.declaration,mi70000mois23:0
+#: field:socialfund.declaration,mi70000mois3:0
+#: field:socialfund.declaration,mi70000mois32:0
+#: field:socialfund.declaration,mi70000mois33:0
+#: field:socialfund.declaration,ms1647315mois1:0
+#: field:socialfund.declaration,ms1647315mois12:0
+#: field:socialfund.declaration,ms1647315mois13:0
+#: field:socialfund.declaration,ms1647315mois2:0
+#: field:socialfund.declaration,ms1647315mois22:0
+#: field:socialfund.declaration,ms1647315mois23:0
+#: field:socialfund.declaration,ms1647315mois3:0
+#: field:socialfund.declaration,ms1647315mois32:0
+#: field:socialfund.declaration,ms1647315mois33:0
+#: field:socialfund.declaration,ms70000mois1:0
+#: field:socialfund.declaration,ms70000mois12:0
+#: field:socialfund.declaration,ms70000mois13:0
+#: field:socialfund.declaration,ms70000mois2:0
+#: field:socialfund.declaration,ms70000mois22:0
+#: field:socialfund.declaration,ms70000mois23:0
+#: field:socialfund.declaration,ms70000mois3:0
+#: field:socialfund.declaration,ms70000mois32:0
+#: field:socialfund.declaration,ms70000mois33:0
+#: field:socialfund.declaration,pcprr1:0 field:socialfund.declaration,pcprr11:0
+#: field:socialfund.declaration,pcprr12:0 field:socialfund.declaration,pcprr2:0
+#: field:socialfund.declaration,pcprr21:0
+#: field:socialfund.declaration,pcprr22:0 field:socialfund.declaration,pf1:0
+#: field:socialfund.declaration,pf2:0 field:socialfund.declaration,ppqecp1:0
+#: field:socialfund.declaration,ppqecp11:0
+#: field:socialfund.declaration,ppqecp12:0
+#: field:socialfund.declaration,ppqecp2:0
+#: field:socialfund.declaration,ppqecp21:0
+#: field:socialfund.declaration,ppqecp22:0
+#: field:socialfund.declaration,regimetotal:0
+#: field:socialfund.declaration,regimetotal2:0
+#: field:socialfund.declaration,regimetotal3:0
+#: field:socialfund.declaration,rr1:0 field:socialfund.declaration,rr2:0
+#: field:socialfund.declaration,salaireotal:0
+#: field:socialfund.declaration,salaireotal2:0
+#: field:socialfund.declaration,salaireotal3:0
+#: field:socialfund.declaration,travailtotal:0
+#: field:socialfund.declaration,travailtotal2:0
+#: field:socialfund.declaration,travailtotal3:0
+#: field:trainingfund.declaration,rate_taf:0
+#: field:trainingfund.declaration,rate_tfcf:0
+#: field:trainingfund.declaration,remuneration_bttaf:0
+#: field:trainingfund.declaration,remuneration_bttf:0
+#: field:wagetax.declaration,allowance_2:0
+#: field:wagetax.declaration,amount_e1:0 field:wagetax.declaration,amount_e2:0
+#: field:wagetax.declaration,amount_e3:0 field:wagetax.declaration,amount_e4:0
+#: field:wagetax.declaration,amount_e5:0
+#: field:wagetax.declaration,amount_retained:0
+#: field:wagetax.declaration,amount_tax1:0
+#: field:wagetax.declaration,amount_tax2:0
+#: field:wagetax.declaration,amount_tax3:0
+#: field:wagetax.declaration,amount_tax4:0
+#: field:wagetax.declaration,netrevenu_2:0
+#: field:wagetax.declaration,revenu_ni1:0
+#: field:wagetax.declaration,revenu_ni2:0
+#: field:wagetax.declaration,revenu_ni3:0
+#: field:wagetax.declaration,revenu_ni4:0
+#: field:wagetax.declaration,taxamount_1:0
+#: field:wagetax.declaration,taxamount_2:0
+#: field:wagetax.declaration,taxamount_3:0 field:wagetax.declaration,total_r:0
+#: field:wagetax.declaration,totalnetamount_1:0
+#: field:wagetax.declaration,totalnetamount_2:0
+#: field:wagetax.declaration,totalrevenu_2:0
+#: field:wagetax.declaration,wageamount_2:0
+msgid "unknown"
+msgstr "unknown"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.act_window,name:l10n_fisctax_civ.action_vat
+msgid "vat"
+msgstr "tva"
+
+#. module: l10n_fisctax_civ
+#: model:ir.actions.act_window,name:l10n_fisctax_civ.action_wagetax
+msgid "wagetax"
+msgstr "its"

@@ -1,0 +1,2285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- debut du module contribuable -->
+           <!-- debut de la form contribuable -->
+                    <record model="ir.ui.view" id="contribuable_form"> 
+                        <field name="name">contribuable.form</field> 
+                        <field name="model">res.company</field> 
+                        <field name="type">form</field> 
+                        <field name="inherit_id" ref="base.view_company_form" />
+                        <field name="arch" type="xml">
+                            <xpath expr="//field[@name='website']" position="after">
+                                <br/><br/>
+                                <field name="sigle" />
+                                <field name="code_et" />
+                                <field name="act_code" />
+                                <field name="employeur" />
+
+                            </xpath>
+                            <xpath expr="//field[@name='company_registry']" position="after">
+                                <br/><br/>
+                                <field name='objet'/>
+                                <field name='service'/>
+                                <field name='quartier'/>
+                                <field name='impot_period'/>
+                            </xpath>
+                        </field>
+                    </record>
+
+                    
+            <!-- fin de la form contribuable -->
+
+        <!-- fin du  module contribuable -->
+
+       <!-- debut de la vue liste de Sociaal Fund -->
+                    <record model="ir.ui.view" id="socialfund_form"> 
+                            
+                            <field name="name">socialfund.form</field> 
+                            <field name="model">socialfund.declaration</field> 
+                            <field name="type">form</field> 
+                            <field name="arch" type="xml">
+                                <link href="fiscalite/static/src/css/declaration.css" rel="stylesheet"/>
+                                <form  class="formulaire" string="Social Fund Form" id="socialfund_form" > 
+                                    <group>
+                                        <field name='state'/>
+                                    </group>
+                                    <group>
+                                        <group > 
+                                            <field name='date'/>  
+                                            <field name='periodicity'/>
+                                            <field name='company_id'
+                                                   on_change="on_change_company_elements(company_id)"
+                                                   context="{'default_company_id':company_id, 'default_address': address, 'default_code_ets': code_ets, 'default_tax_period': tax_period, 'default_tax_service': tax_service, 'default_activity_code': activity_code, 'default_phone': phone, 'default_employer': employer, 'default_company_tax_code': company_tax_code,}"/>
+                                            <field name='tax_period'/>
+                                            <field name='address'/>
+                                            <field name='phone'/>
+                                        </group>
+                                        <group >
+                                            <field name='tax_service'/>
+                                            <field name='company_tax_code'/>
+                                            <field name='code_ets'/>
+                                            <field name='activity_code'/>
+                                            <field name='employer'/><br/>
+                                        </group> 
+                                    </group>
+                                    <group>
+                                        <field name="totalamount"/>   
+                                    </group>
+                                    <sheet string="">
+                                        <group style="align:left;">
+                                            <field name='month'/>
+                                            <table  class='table1' border="1" width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>CATEGORY OF WAGES</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>NUMBER OF WAGES</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>PENSION PLAN</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>FAMILY BENEFITS AND ACCIDENTS OF WORK</b></string>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Daily and occasional hours less than or equal to 3231 F day</b></string>
+                                                        </td>
+                                                        <td><field name="hjoi3231jours1" /></td>
+                                                        <td><field name="hjoi3231jours2"/></td>
+                                                        <td><field name="hjoi3231jours3"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Daily and occasional times greater than or equal to 3231 F day</b></string>
+                                                        </td>
+                                                        <td><field name="hjos3231jours1" /></td>
+                                                        <td><field name="hjos3231jours2"/></td>
+                                                        <td><field name="hjos3231jours3"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly less than or equal to 70,000 f per month</b></string>
+                                                        </td>
+                                                        <td><field name="mi70000mois1" /></td>
+                                                        <td><field name="mi70000mois2"/></td>
+                                                        <td><field name="mi70000mois3"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly over 70,000 F. per month and less than or equal to 1,647,315 F. per month</b></string>
+                                                        </td>
+                                                        <td><field name="ms70000mois1"/></td>
+                                                        <td><field name="ms70000mois2"/></td>
+                                                        <td><field name="ms70000mois3"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly rates over 1,647,315 F. per month</b></string>
+                                                        </td>
+                                                        <td><field name="ms1647315mois1"/></td>
+                                                        <td><field name="ms1647315mois2"/></td>
+                                                        <td><field name="ms1647315mois3"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>TOTAL</b></string>
+                                                        </td>
+                                                        <td><field name="salaireotal"/></td>
+                                                        <td><field name="regimetotal" /></td>
+                                                        <td><field name="travailtotal"/></td>
+                                                    </tr>
+
+                                            </table>
+                                        </group>
+                                        <group style="align:center;">
+                                            <field name='month2'/>
+                                            <table  class="table2" border="1" width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>CATEGORY OF WAGES</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>NUMBER OF WAGES</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>PENSION PLAN</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>FAMILY BENEFITS AND ACCIDENTS OF WORK</b></string>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Daily and occasional hours less than or equal to 3231 F day</b></string>
+                                                        </td>
+                                                        <td><field name="hjoi3231jours12"/></td>
+                                                        <td><field name="hjoi3231jours22"/></td>
+                                                        <td><field name="hjoi3231jours32"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Daily and occasional times greater than or equal to 3231 F day</b></string>
+                                                        </td>
+                                                        <td><field name="hjos3231jours12"/></td>
+                                                        <td><field name="hjos3231jours22"/></td>
+                                                        <td><field name="hjos3231jours32"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly less than or equal to 70,000 f per month</b></string>
+                                                        </td>
+                                                        <td><field name="mi70000mois12"/></td>
+                                                        <td><field name="mi70000mois22"/></td>
+                                                        <td><field name="mi70000mois32"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly over 70,000 F. per month and less than or equal to 1,647,315 F. per month</b></string>
+                                                        </td>
+                                                        <td><field name="ms70000mois12"/></td>
+                                                        <td><field name="ms70000mois22"/></td>
+                                                        <td><field name="ms70000mois32"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly rates over 1,647,315 F. per month</b></string>
+                                                        </td>
+                                                        <td><field name="ms1647315mois12"/></td>
+                                                        <td><field name="ms1647315mois22"/></td>
+                                                        <td><field name="ms1647315mois32"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>TOTAL</b></string>
+                                                        </td>
+                                                        <td><field name="salaireotal2"/></td>
+                                                        <td><field name="regimetotal2"/></td>
+                                                        <td><field name="travailtotal2"/></td>
+                                                    </tr>
+                                            </table>
+                                        </group>
+                                        <group style="align:right;">
+                                            <field name='month3'/>
+                                            <table  class='table3' border="1" width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>CATEGORY OF WAGES</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>NUMBER OF WAGES</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>PENSION PLAN</b></string>
+                                                        </td>
+                                                        <td>
+                                                            <string position="center"><b>FAMILY BENEFITS AND ACCIDENTS OF WORK</b></string>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Daily and occasional hours less than or equal to 3231 F day</b></string>
+                                                        </td>
+                                                        <td><field name="hjoi3231jours13"/></td>
+                                                        <td><field name="hjoi3231jours23"/></td>
+                                                        <td><field name="hjoi3231jours33"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Daily and occasional times greater than or equal to 3231 F day</b></string>
+                                                        </td>
+                                                        <td><field name="hjos3231jours13"/></td>
+                                                        <td><field name="hjos3231jours23"/></td>
+                                                        <td><field name="hjos3231jours33"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly less than or equal to 70,000 f per month</b></string>
+                                                        </td>
+                                                        <td><field name="mi70000mois13"/></td>
+                                                        <td><field name="mi70000mois23"/></td>
+                                                        <td><field name="mi70000mois33"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly over 70,000 F. per month and less than or equal to 1,647,315 F. per month</b></string>
+                                                        </td>
+                                                        <td><field name="ms70000mois13" /></td>
+                                                        <td><field name="ms70000mois23"/></td>
+                                                        <td><field name="ms70000mois33"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>Monthly rates over 1,647,315 F. per month</b></string>
+                                                        </td>
+                                                        <td><field name="ms1647315mois13"/></td>
+                                                        <td><field name="ms1647315mois23"/></td>
+                                                        <td><field name="ms1647315mois33"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <string position="center"><b>TOTAL</b></string>
+                                                        </td>
+                                                        <td><field name="salaireotal3"/></td>
+                                                        <td><field name="regimetotal3" /></td>
+                                                        <td><field name="travailtotal3"/></td>
+                                                    </tr>
+                                            </table>
+                                        </group>
+                                    </sheet>
+                                    <br/>
+                                    <br/>  
+                                    <group>
+                                        <field name='csbsactrr' />
+                                        <field name='csbsctrpf'/>
+                                   </group>
+                                   <sheet>
+                                        <group>
+                                            <field name="month1"/>
+                                        </group>
+                                        <table border="1" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b></b></string>
+                                                </td>
+                                                <td>
+                                                    <string position="center"><b>Numbers</b></string>
+                                                </td>
+                                                <td>
+                                                    <string position="center"><b>Gross wages</b></string>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b>People not contributing to the Retirement Plan</b></string>
+                                                </td>
+                                                <td>
+                                                    <field name="pcprr1" />
+                                                </td>
+                                                <td>
+                                                    <field name="pcprr2" />
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b>Persons for whom the employer does not contribute</b></string>
+                                                </td>
+                                                <td>
+                                                    <field name="ppqecp1" />
+                                                </td>
+                                                <td>
+                                                    <field name="ppqecp2" />
+                                                </td>
+                                                
+                                            </tr>
+                                        </table>
+                                        <group>
+                                            <field name="month4"/>
+                                        </group>
+                                        <table border="1" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b></b></string>
+                                                </td>
+                                                <td>
+                                                    <string position="center"><b>Numbers</b></string>
+                                                </td>
+                                                <td>
+                                                    <string position="center"><b>Gross wages</b></string>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b>People not contributing to the Retirement Plan</b></string>
+                                                </td>
+                                                <td>
+                                                    <field name="pcprr11" />
+                                                </td>
+                                                <td>
+                                                    <field name="pcprr12" />
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b>Persons for whom the employer does not contribute</b></string>
+                                                </td>
+                                                <td>
+                                                    <field name="ppqecp11" />
+                                                </td>
+                                                <td>
+                                                    <field name="ppqecp12" />
+                                                </td>
+                                                
+                                            </tr>
+                                        </table>
+                                        <group>
+                                            <field name="month5"/>
+                                        </group>
+                                        <table border="1" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b></b></string>
+                                                </td>
+                                                <td>
+                                                    <string position="center"><b>Numbers</b></string>
+                                                </td>
+                                                <td>
+                                                    <string position="center"><b>Gross wages</b></string>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b>People not contributing to the Retirement Plan</b></string>
+                                                </td>
+                                                <td>
+                                                    <field name="pcprr21" />
+                                                </td>
+                                                <td>
+                                                    <field name="pcprr22" />
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <string position="center"><b>Persons for whom the employer does not contribute</b></string>
+                                                </td>
+                                                <td>
+                                                    <field name="ppqecp21" />
+                                                </td>
+                                                <td>
+                                                    <field name="ppqecp22" />
+                                                </td>
+                                                
+                                            </tr>
+                                        </table>
+                                    </sheet>
+                                     <br/><br/>
+                                    <string><b>
+                                    CONTRIBUTIONS FROM CONTRIBUTIONS DUES 
+                                    </b></string>
+                                     <table border="1" width="100%">
+                                        <tr>
+                                            <td>
+                                                <string position="center"><b>SECTIONS</b></string>
+                                            </td>
+                                            <td>
+                                                <string position="center"><b>SALARY SUBMITTED TO CONTRIBUTIONS</b></string>
+                                            </td>
+                                            <td>
+                                                <string position="center"><b>RATE (In %)</b></string>
+                                            </td>
+                                            <td>
+                                                <string position="center"><b>AMOUNT ( In Francs CFA)
+                                                </b></string>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <string position="center"><b>Family benefits</b></string>
+                                            </td>
+                                            <td><field name='pf1'/></td>
+                                            <td><field name='pf2'/></td>
+                                            <td><field name='pf3'/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <string position="center"><b>Work accident</b></string>
+                                            </td>
+                                            <td><field name='at1'/></td>
+                                            <td><field name='at2'/></td>
+                                            <td><field name='at3'/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <string position="center"><b>Pension plan</b></string>
+                                            </td>
+                                            <td><field name='rr1'/></td>
+                                            <td><field name='rr2'/></td>
+                                            <td><field name='rr3'/></td>
+                                        </tr>
+                                    </table>
+                                   <group>
+                                        <field name='tcap'/>
+                                        <br/>
+                                        <br/>
+                                   </group>
+                                </form>
+                            </field>
+                    </record>
+                <!-- fin de la vue form de socialfund -->
+
+                <!-- La vue liste de socialfund -->
+                    <record model="ir.ui.view" id="socialfund_tree">
+                        <field name="name">socialfund.tree</field>
+                        <field name="model">socialfund.declaration</field>
+                        <field name="type">tree</field> 
+                        <field name="arch" type="xml">
+                            <tree string="socialfund TAB"  > 
+                                     <field name='name'/>  
+                                     <field name='date'/>  
+                                     <field name='periodicity'/>
+                                     <field name='csbsactrr'/>
+                                     <field name='csbsctrpf'/>
+                                     <field name='pf3' sum="Contribution for familly prestations"/>
+                                     <field name='at3' sum="Contribution for work accident" />
+                                     <field name='rr3' sum="Contribution for pension plan" />
+                                     <field name='tcap' sum="TOTAL CONTRIBUTION TO PAY"/>
+                            </tree>
+                        </field>
+                    </record>
+
+                    <record model="ir.actions.act_window" id="action_socialfund"> 
+                        <field name="name">Social Fund</field> 
+                        <field name="res_model">socialfund.declaration</field> 
+                        <field name="view_type">form</field> 
+                        <field name="view_mode">tree,form</field>
+                    </record>
+
+                <!-- fin de la vue liste de social fund -->
+
+                <!-- debut de la vue du wizzard de social fund -->
+
+                    <record id="socialfund_xls_form" model="ir.ui.view">
+                        <field name="name"> Social Fund Xls Form</field>
+                        <field name="model">socialfund.report.file</field>
+                        <field name="type">form</field>
+                        <field name="arch" type="xml">
+                            <form string="Export socialfund file"  >
+                                <group>
+                                    <label string="Save the file in  excel format ' .'xls' ."/>
+                                    <field name='file_name' invisible="1"/>
+                                    <field name="file" readonly="1" filename="file_name" nolabel="1"/>
+                                </group>
+                                <footer>
+                                    <button string="Close" class="oe_highlight" special="cancel"/>
+                                </footer>
+                            </form>
+                        </field>
+
+                    </record>
+
+                <!-- fin de la vue du wizzard de socialfund -->
+
+                <!-- dbut du raport socialfund -->
+
+                        <record id="socialfund_report_action" model="ir.actions.server">
+                              <field name="name">Drownload the excel file of social fund declaration</field>
+                              <field name="type">ir.actions.server</field>
+                              <field name="model_id" ref="model_socialfund_declaration"/>
+                              <field name="state">code</field>
+                              <field name="code">action = self.socialfund_report_xls(cr, uid, context.get('active_ids'), context=context)</field>
+                        </record>
+                         <record id="socialfund_reprot_action_view" model="ir.values">
+                            <field name="model_id" ref="model_socialfund_declaration"/>
+                            <field name="name">Drownload the excel file of social fund declaration</field>
+                            <field name="key2">client_action_multi</field>
+                            <field name="value" eval= "'ir.actions.server,' + str(ref('socialfund_report_action'))"/>
+                            <field name="key">action</field>
+                            <field name="model">socialfund.declaration</field>
+                        </record>
+                   <!-- fin du raport socialfund -->
+        
+                     
+       <!-- fin du module socialfund -->
+
+
+       <!-- debut du module trainingfund -->
+            <!-- fin de la vue liste de trainingfund -->
+                    <record model="ir.ui.view" id="trainingfund_form"> 
+                        <field name="name">trainingfund.form</field> 
+                        <field name="model">trainingfund.declaration</field> 
+                        <field name="type">form</field> 
+                        <field name="arch" type="xml">
+                            <form string="Training Fund Form"   >
+                              <group>
+                                <field name="state"/>
+                              </group>
+                              <group> 
+                                <group> 
+                                    <field name='date'/> 
+                                    <field name="periodicity"/> 
+                                    <field name='company_id'
+                                           on_change="on_change_company_elements(company_id)"
+                                           context="{'default_company_id':company_id,'default_tax_period': tax_period, 'default_tax_service': tax_service, 'default_company_tax_code': company_tax_code,}" /> 
+                                </group>
+                                <group>
+                                    <field name='tax_period'/>
+                                    <field name='tax_service'/>
+                                    <field name='company_tax_code'/>
+                                </group>
+                               </group>
+                               <sheet>
+                                   <group>
+                                        <field name='employe_workforce'/> 
+                                   </group>
+                                   <br/><br/>
+                                   <string><b>02 – DETERMINATION OF TAXES</b></string>
+                                   <br/><br/>
+
+                                   <table width="100%" border="0">
+                                        <tr>
+                                                <td>
+                                                    <string>
+                                                        <b> NATURE OF TAXES</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>TOTAL GROSS REMUNERATION </b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>RATE(In %)</b>
+                                                    </string>
+                                                </td>
+                                                 <td>
+                                                    <string>
+                                                        <b>MONTHLY AMOUNT</b>
+                                                    </string>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>
+                                                    <string>
+                                                        <b>2.1- LEARNING TAX (TA)</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                   <field name='remuneration_bttaf'/>
+                                                </td>
+                                                <td>
+                                                    <field name='rate_taf'/>
+                                                </td>
+                                                 <td>
+                                                   <field name='monthly_amount_tatf'/>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>
+                                                    <string>
+                                                        <b>2.2- TAX ON CONTINUING EDUCATION (TFC)</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <field name='remuneration_bttf'/>
+                                                </td>
+                                                <td>
+                                                    <field name='rate_tfcf'/>
+                                                </td>
+                                                 <td>
+                                                    <field name='monthly_amount_tfcsf'/>
+                                                </td>
+                                        </tr>
+                                    </table>
+                                    <br/><br/>
+                                    <group>
+                                        <field name= 'total_amount_tfcsf'/>
+                                        <field name='regulation_state_sf'/>
+                                    </group>
+                                    <string>
+                                        <b>03- ANNUAL STANDARDIZATION</b>
+                                    </string>
+                                    <group>
+                                        <group>
+                                            <field name= 'employe_workforce_asf'/>
+                                            <field name='amount_tcfsf'/>
+                                            <field name= 'amount_pay_tcfsf'/>
+                                            <field name='amount_tax_tcfsf'/>
+                                        </group>
+                                        <group>
+                                            <field name='engagement_tpsf'/>
+                                            <field name= 'payment'/><br/><br/>
+                                            <field name='payment_todo'/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </record>
+                <!-- fin de la vue form de training -->
+                <!-- La vue liste de training -->
+                    <record model="ir.ui.view" id="trainingfund_tree">
+                        <field name="name">trainingfund.tree</field>
+                        <field name="model">trainingfund.declaration</field>
+                        <field name="type">tree</field> 
+                        <field name="arch" type="xml">
+                            <tree string="Training Fund Declaration Tab"  > 
+                                    <field name="name"/> 
+                                    <field name='date'/> 
+                                    <field name="periodicity"/>  
+                                    <field name='tax_service'/>
+                                    <field name='employe_workforce'/>
+                                    <field name='monthly_amount_tatf' sum="MONTHLY APPRENTICESHIP TAX AMOUNT" />
+                                    <field name='monthly_amount_tfcsf' sum="MONTHLY AMOUNT (TFC)"/>
+                                    <field name= 'payment' sum="3.5- Payment if |3.2| is under |3.3| + |3.4|"/>
+                                    <field name='payment_todo' sum="AMOUT TOTAL TO PAY (FDFP)"/>
+                            </tree>
+                        </field>
+                    </record>
+                <!-- fin de la vue liste de trainingfund -->
+
+                     <record model="ir.actions.act_window" id="action_trainingfund"> 
+                        <field name="name">Training Fund</field> 
+                        <field name="res_model">trainingfund.declaration</field> 
+                        <field name="view_type">form</field> 
+                        <field name="view_mode">tree,form</field>
+                    </record>
+
+                <!-- debut de la vue du wizzard de trainingfund -->
+
+                    <record id="trainingfund_xls_form" model="ir.ui.view">
+                        <field name="name"> TSE Xls Form</field>
+                        <field name="model">trainingfund.report.file</field>
+                        <field name="type">form</field>
+                        <field name="arch" type="xml">
+                            <form string="Export Training Fund file"  >
+                                <group>
+                                    <label string="Save the file in  excel format ' .'xls' ."/>
+                                    <field name='file_name' invisible="1"/>
+                                    <field name="file" readonly="1" filename="file_name" nolabel="1"/>
+                                </group>
+                                <footer>
+                                    <button string="Close" class="oe_highlight" special="cancel"/>
+                                </footer>
+                            </form>
+                        </field>
+
+                    </record>
+
+                <!-- fin de la vue du wizzard de fdfp -->
+
+                <!-- debut du raport fdfp -->
+
+                        <record id="trainingfund_report_action" model="ir.actions.server">
+                              <field name="name">Drownload the excel file of Training Fund</field>
+                              <field name="type">ir.actions.server</field>
+                              <field name="model_id" ref="model_trainingfund_declaration"/>
+                              <field name="state">code</field>
+                              <field name="code">action = self.trainingfund_report_xls(cr, uid, context.get('active_ids'), context=context)</field>
+                        </record>
+                         <record id="trainingfund_reprot_action_view" model="ir.values">
+                            <field name="model_id" ref="model_trainingfund_declaration"/>
+                            <field name="name">Drownload the excel file of Training Fund</field>
+                            <field name="key2">client_action_multi</field>
+                            <field name="value" eval= "'ir.actions.server,' + str(ref('trainingfund_report_action'))"/>
+                            <field name="key">action</field>
+                            <field name="model">trainingfund.declaration</field>
+                        </record>
+                   <!-- fin du raport tse -->
+
+       <!-- fin du module training -->
+
+       <!-- debut du module wagetax -->
+                <!-- la vue form de wagetax -->
+                    <record model="ir.ui.view" id="wagetax_form">
+                        <field name="name">wagetax.form</field>
+                        <field name="model">wagetax.declaration</field>
+                        <field name="type">form</field>
+                        <field name="arch" type="xml">
+                            <form string="Wagetax Declaration : Form"  >
+                                <group>
+                                    <field name="state"/>
+                                </group>
+                                <group> 
+                                    <group>
+                                        <field name="date"/>
+                                        <field name='periodicity'/>
+                                        <field name="tax_period"/>
+                                    </group>
+                                    <group>
+                                        <field name='tax_service'/>
+                                        <field name='company_tax_code'/>
+
+                                    </group> 
+                                </group>
+                                <group>
+                                    <string>
+                                        <b>01- Ratepayer</b>
+                                    </string>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name='company_id'
+                                               on_change="on_change_company_elements(company_id)"
+                                               context="{'default_company_id':company_id, 'default_tax_period': tax_period, 'default_tax_service': tax_service, 'default_company_tax_code': company_tax_code, 'default_initials': initials, 'default_company_goal': company_goal, 'default_street': street, 'default_pobox': pobox, 'default_phone': phone,'default_street2': street2,'default_district': district,'default_email': email}"/>
+                                        <field name="initials"/>
+                                        <field name="company_goal"/>
+                                        <field name='street'/>
+                                        <field name="pobox"/>
+                                    </group>
+                                    <group>
+                                        <field name='phone'/>
+                                        <field name='district'/>
+                                        <field name='street2'/>
+                                        <field name='email'/>
+                                    </group>
+                                </group>
+                                <br/><br/>
+                                <string><b>02 -  DETERMINATION OF THE PLATE</b></string>
+                                    
+
+                                <sheet>
+                                    
+                                     <table width="100%" border="1">
+                                        <tr>
+                                            <td>Annual Tax </td>
+                                            <td>
+                                                <field name="annual_tax"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>
+                                                    <string>
+                                                        <b> N°</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>PENSIONS </b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>Total amount paid</b>
+                                                    </string>
+                                                </td>
+                                                 <td>
+                                                    <string>
+                                                        <b>Effective</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>Amount exonerated</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>Taxable amount</b>
+                                                    </string>
+                                                </td>
+                                                 <td>
+                                                    <string>
+                                                        <b>Dejection</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>Taxable net income</b>
+                                                    </string>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 
+                                                  <string>
+                                                        <b>1</b>
+                                                    </string>                                  
+                                            </td>
+                                            <td>
+                                                <string>
+                                                    <b>Pensions ≤ 300.000 FCFA / month</b>
+                                                </string>
+
+                                            </td>
+                                            <td>
+                                                <field name="amount_tv1"/>
+                                            </td>
+                                            <td>
+                                                <field name="workforce_1" />
+                                            </td>
+                                            <td>
+                                                <field name="amount_exo1" />                                    
+                                            </td>
+                                            <td>
+                                                <field name="amount_tax1" />
+                                            </td>
+                                            <td>
+                                                <field name="taxreduction_1" />
+                                            </td>
+                                            <td>
+                                                <field name="revenu_ni1" />
+                                            </td>
+                                            
+                                        </tr>
+                                         <tr>
+                                            <td> 
+                                                  <string>
+                                                        <b>2</b>
+                                                    </string>                                  
+                                            </td>
+                                            <td>
+                                                <string>
+                                                    <b>Pension > 300,000 FCFA</b>
+                                                </string>
+
+                                            </td>
+                                            <td>
+                                                <field name="amount_tv2"/>
+                                            
+                                            </td>
+                                            <td>
+                                                <field name="workforce_2" />
+                                            </td>
+                                            <td>
+                                                <field name="amount_exo2" />                                    
+                                            </td>
+                                            <td>
+                                                <field name="amount_tax2" />
+                                            </td>
+                                            <td>
+                                                <field name="taxreduction_2" />
+                                            </td>
+                                            <td>
+                                                <field name="revenu_ni2" />
+                                            </td>
+                                            
+                                        </tr>
+                                   </table>
+                                <br/><br/>
+
+                                    <table width="100%" border="1">
+                                        <tr>
+                                                <td>
+                                                    <string>
+                                                        <b> N°</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>LIFE ANNUITIES</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>Total amount paid</b>
+                                                    </string>
+                                                </td>
+                                                 <td>
+                                                    <string>
+                                                        <b>Effective</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>Amount exonerated</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>Taxable amount</b>
+                                                    </string>
+                                                </td>
+                                                 <td>
+                                                    <string>
+                                                        <b>Dejection</b>
+                                                    </string>
+                                                </td>
+                                                <td>
+                                                    <string>
+                                                        <b>Taxable net income</b>
+                                                    </string>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 
+                                                  <string>
+                                                        <b>3</b>
+                                                    </string>                                  
+                                            </td>
+                                            <td>
+                                                <string>
+                                                    <b>Pensions ≤ 300.000 FCFA / month</b>
+                                                </string>
+
+                                            </td>
+                                            <td>
+                                                <field name="amount_tv3"/>
+                                            
+                                            </td>
+                                            <td>
+                                                <field name="workforce_3" />
+                                            </td>
+                                            <td>
+                                                <field name="amount_exo3" />                                    
+                                            </td>
+                                            <td>
+                                                <field name="amount_tax3" />
+                                            </td>
+                                            <td>
+                                                <field name="taxreduction_3" />
+                                            </td>
+                                            <td>
+                                                <field name="revenu_ni3" />
+                                            </td>
+                                            
+                                        </tr>
+                                         <tr>
+                                            <td> 
+                                                  <string>
+                                                        <b>4</b>
+                                                    </string>                                  
+                                            </td>
+                                            <td>
+                                                <string>
+                                                    <b>Pension > 300,000 FCFA</b>
+                                                </string>
+
+                                            </td>
+                                            <td>
+                                                <field name="amount_tv4"/>
+                                            
+                                            </td>
+                                            <td>
+                                                <field name="workforce_4" />
+                                            </td>
+                                            <td>
+                                                <field name="amount_exo4" />                                    
+                                            </td>
+                                            <td>
+                                                <field name="amount_tax4" />
+                                            </td>
+                                            <td>
+                                                <field name="taxreduction_4" />
+                                            </td>
+                                            <td>
+                                                <field name="revenu_ni4" />
+                                            </td>
+                                            
+                                        </tr>
+                                   </table>
+                                   <group>
+                                       <group>
+                                            <table width="50%" border="1">
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>N°</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Gross income </b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Gross amount</b>
+                                                        </string>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>5</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Remuneration paid</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="amount_rv" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>6</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Benefits in kind (evaluation)</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="amount_an" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>7</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Other (s) to be specified)</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="amount_a" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>8</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Gross total amount </b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="amount_tb" />
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                       </group>
+                                       <group>
+                                        <table width="50%" border="1">
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>N°</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Non-taxable income</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>ITS</b>
+                                                        </string>
+                                                    </td>
+                                                     <td>
+                                                        <string>
+                                                            <b>Employer Contribution</b>
+                                                        </string>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>9</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Amount of wages (less than minimum) 2 not stated or not taxed</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="wageamount_1"/>
+                                                    </td>
+                                                     <td>
+                                                        <field name="allowance_1"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>10</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Non-taxable benefits</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="totalrevenu_1"/>
+                                                    </td>
+                                                     <td>
+                                                        <field name="netrevenu_1"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>11</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Total gross taxable income</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="wageamount_2"/>
+                                                    </td>
+                                                     <td>
+                                                        <field name="allowance_2"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>12</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Revenu net imposable</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="totalrevenu_2"/>
+                                                    </td>
+                                                     <td>
+                                                        <field name="netrevenu_2"/>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                       </group>
+                                   </group>
+                                            <table width="75%" border="1">
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>N°</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>Taxable net income</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>ITS</b>
+                                                        </string>
+                                                    </td>
+                                                     <td>
+                                                        <string>
+                                                            <b>Employer Contribution</b>
+                                                        </string>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <string>
+                                                            <b>13</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <string>
+                                                            <b>TOTAL NET AMOUNT IMPOSABLE</b>
+                                                        </string>
+                                                    </td>
+                                                    <td>
+                                                        <field name="totalnetamount_1"/>
+                                                    </td>
+                                                     <td>
+                                                        <field name="totalnetamount_2"/>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </sheet>
+                                        <br/><br/>
+                                        <string>
+                                            <b>
+                                                03 - DETERMINATION OF TAX
+                                            </b>
+                                        </string>
+                                        <sheet>
+                                                <string>
+                                                    <b>
+                                                        03.1 - TAXES WITHDRAWN ON SALARIES
+                                                    </b>
+                                                </string>
+                                                 <br/>
+                                                <table width="100%" border="1">
+                                                    <tr>
+                                                            <td>
+                                                                <string>
+                                                                    <b> N°</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Natrue taxes</b>
+                                                                </string>
+                                                            </td>
+                                                             <td>
+                                                                <string>
+                                                                    <b>Tax base</b>
+                                                                </string>
+                                                            </td>
+                                                             <td>
+                                                                <string>
+                                                                    <b>Rate (In %)</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Amount</b>
+                                                                </string>
+                                                            </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>14</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Tax on salaries, wages, pensions, life annuities (IS)</b>
+                                                            </string>
+
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <field name="base_1" />
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <field name="taxrate_1" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="taxamount_1" />
+                                                        </td> 
+                                                    </tr>
+                                                     <tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>15</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>National contribution (CN)</b>
+                                                            </string>
+
+                                                        </td>
+                                                        <td>
+                                                            <field name="base_2" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="taxrate_2" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="taxamount_2" />
+                                                        </td>
+                                                       
+                                                    </tr>
+                                                    <tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>16</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>General Income Tax (GTI)</b>
+                                                            </string>
+
+                                                        </td>
+                                                        <td>
+                                                            <field name="base_3" />                                    
+                                                        </td>
+                                                        <td>
+                                                            <field name="taxrate_3" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="taxamount_3" />
+                                                        </td>
+                                                    </tr>
+                                               </table>
+                                               <table width="50%" border="1">
+                                                    <tr>
+                                                            <td>
+                                                                <string>
+                                                                    <b> 17</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>TOTAL DEDUCTIONS TO EMPLOYEES</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <field name="total_wr" />
+                                                            </td>
+                                                    </tr>
+                                               </table>
+                                               <br/><br/>
+                                               <string>
+                                                    <b> 03.2- CONTRIBUTIONS PAYABLE TO THE EMPLOYER</b>
+                                               </string>
+                                               <br/>
+                                                <table width="100%" border="1">
+                                                    <tr>
+                                                            <td>
+                                                                <string>
+                                                                    <b> N°</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Nature of taxes</b>
+                                                                </string>
+                                                            </td>
+                                                             <td>
+                                                                <string>
+                                                                    <b>Class of employees</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Effectives</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Taxable net income</b>
+                                                                </string>
+                                                            </td>
+                                                             <td>
+                                                                <string>
+                                                                    <b>Rate (In %)</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Amount</b>
+                                                                </string>
+                                                            </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>18</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Employer Contribution (EC)</b>
+                                                            </string>
+
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Local presonnel (General scheme)</b>
+                                                            </string>
+                                                        </td>
+                                                        <td>
+                                                            <field name="wageforce_e1" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="revenu_nii1" />                                    
+                                                        </td>
+                                                        <td>
+                                                            <field name="rate_e1" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="amount_e1" />
+                                                        </td>
+                                                       
+                                                    </tr>
+                                                     <tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>19</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Employer Contribution (EC)</b>
+                                                            </string>
+
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Expatriate staff (General scheme)</b>
+                                                            </string>
+                                                        </td>
+                                                        <td>
+                                                            <field name="wageforce_e2" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="revenu_nii2" />                                    
+                                                        </td>
+                                                        <td>
+                                                            <field name="rate_e2" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="amount_e2" />
+                                                        </td>
+                                                       
+                                                    </tr><tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>20</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Employer Contribution (EC)</b>
+                                                            </string>
+
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Agricultural regime</b>
+                                                            </string>
+                                                        </td>
+                                                        <td>
+                                                            <field name="workforce_e3" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="revenu_nii3" />                                    
+                                                        </td>
+                                                        <td>
+                                                            <field name="rate_e3" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="amount_e3" />
+                                                        </td>
+                                                       
+                                                    </tr><tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>21</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>CN</b>
+                                                            </string>
+
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Local presonnel (General scheme)</b>
+                                                            </string>
+                                                        </td>
+                                                        <td>
+                                                            <field name="workforce_e4" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="revenu_nii4" />                                    
+                                                        </td>
+                                                        <td>
+                                                            <field name="rate_e4" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="amount_e4" />
+                                                        </td>
+                                                       
+                                                    </tr><tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>22</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>CN</b>
+                                                            </string>
+
+                                                        </td>
+                                                        <td>
+                                                            <string>
+                                                                <b>Expatriate staff (General scheme)</b>
+                                                            </string>
+                                                        </td>
+                                                        <td>
+                                                            <field name="workforce_e5" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="revenu_nii5" />                                    
+                                                        </td>
+                                                        <td>
+                                                            <field name="rate_e5" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="amount_e5" />
+                                                        </td>
+                                                       
+                                                    </tr>
+                                               </table>
+
+                                                <table width="50%" border="1">
+                                                    <tr>
+                                                            <td>
+                                                                <string>
+                                                                    <b> 23</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>CONTRIBUTIONS PAYABLE TO THE EMPLOYER TOTAL</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <field name="totalcontribution" />
+                                                            </td>
+                                                    </tr>
+                                               </table>
+                                               <br/><br/>
+                                               <string>
+                                                    <b>03.3 - SPECIFIC RETENTION OF THE FOREST REGIME IN CASE OF CLOSURE</b>
+                                                </string>
+
+                                                <table width="100%" border="1">
+                                                    <tr>
+                                                            <td>
+                                                                <string>
+                                                                    <b> N°</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Nature of taxes</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Taxable net income</b>
+                                                                </string>
+                                                            </td>
+                                                             <td>
+                                                                <string>
+                                                                    <b>Rate (In %)</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Amount</b>
+                                                                </string>
+                                                            </td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>24</b>
+                                                                </string>
+                                                        </td>                                  
+
+                                                        <td>
+                                                           <string>
+                                                                    <b>Retention of income of loggers as tenant</b>
+                                                            </string>
+                                                        </td>
+                                                        <td>
+                                                            <field name="revenu_netimp" />                                    
+                                                        </td>
+                                                        <td>
+                                                            <field name="rate_re" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="amount_retained" />
+                                                        </td>
+                                                    </tr>
+                                               </table>
+                                                <br/><br/>
+                                               <string>
+                                                     <b> 03.4 - ACCRUED</b>
+                                               </string>
+
+                                                <table width="100%" border="1">
+                                                    <tr>
+                                                            <td>
+                                                                <string>
+                                                                    <b> N°</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Salary Tax (ST)</b>
+                                                                </string>
+                                                            </td>
+                                                             <td>
+                                                                <string>
+                                                                    <b>National contribution (CN)</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>General income tax</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Employer contribution (EC)</b>
+                                                                </string>
+                                                            </td>
+                                                             <td>
+                                                                <string>
+                                                                    <b>National contribution payable by the employer (CN)</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>Total regularization</b>
+                                                                </string>
+                                                            </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> 
+                                                              <string>
+                                                                    <b>25</b>
+                                                                </string>                                  
+                                                        </td>
+                                                        <td>
+                                                            <field name="tax"/>
+                                                        
+                                                        </td>
+                                                        <td>
+                                                            <field name="contribution_n" />                                    
+                                                        </td>
+                                                        <td>
+                                                            <field name="tax_gsr" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="contribution_e" />
+                                                        </td>
+                                                        <td>
+                                                            <field name="contribution_nce" />
+                                                        </td>
+                                                         <td>
+                                                            <field name="total_r" />
+                                                        </td>
+                                                    </tr>
+                                               </table>
+
+                                                <table width="35%" border="1">
+                                                    <tr>
+                                                            <td>
+                                                                <string>
+                                                                    <b> 26</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>TOTAL AMOUNT TO PAY </b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <field name="amount_tp" />
+                                                            </td>
+                                                    </tr>
+                                                    <tr>
+                                                             <td>
+                                                                <string>
+                                                                    <b>27</b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <string>
+                                                                    <b>AMOUNT TO BE REPORTED </b>
+                                                                </string>
+                                                            </td>
+                                                            <td>
+                                                                <field name="amount_tr" />
+                                                            </td>
+                                                    </tr>     
+                                               </table>
+                                        </sheet>
+                            </form>
+                        </field>
+                    </record>
+                 <!-- fin de la form wagetax -->
+                 <!-- vue liste de wagetax -->
+                    <record model="ir.ui.view" id="wagetax_tree">
+                        <field name="name">wagetax.tree</field>
+                        <field name="model">wagetax.declaration</field>
+                        <field name="type">tree</field>
+                        <field name="arch" type="xml">
+                            <tree string="Wagetax Declaration : Tab"  >
+                                 <field name="name"/>
+                                <field name="date"/>
+                                <field name='periodicity'/>
+                                <field name='tax_service'/>
+                                <field name="amount_tb" sum='Gross total revenu'/>
+                                <field name="total_wr" sum="Total wage retenues" />
+                                <field name='totalcontribution' sum='Employer total contribution'/>
+                                <field name="amount_tp" sum='Amount to pay'/>
+                                <field name="amount_tr" sum='Amount to report'/>
+                                
+                            </tree>
+                        </field>
+                    </record>
+            <!-- fin de la vue liste de wagetax -->
+                    <record model="ir.actions.act_window" id="action_wagetax">
+                        <field name="name">wagetax</field>
+                        <field name="res_model">wagetax.declaration</field>
+                        <field name="view_type">form</field>
+                        <field name="view_mode">tree,form</field>
+                    </record>
+
+            <!-- debut de la vue du wizzard de wagetax -->
+
+                    <record id="wagetax_xls_form" model="ir.ui.view">
+                        <field name="name"> wagetax Xls Form</field>
+                        <field name="model">wagetax.report.file</field>
+                        <field name="type">form</field>
+                        <field name="arch" type="xml">
+                            <form string="Export wagetax file"  >
+                                <group>
+                                    <label string="Save the file in  excel format ' .'xls' ."/>
+                                    <field name='file_name' invisible="1"/>
+                                    <field name="file" readonly="1" filename="file_name" nolabel="1"/>
+                                </group>
+                                <footer>
+                                    <button string="Close" class="oe_highlight" special="cancel"/>
+                                </footer>
+                            </form>
+                        </field>
+
+                    </record>
+
+                <!-- fin de la vue du wizzard de wagetax -->
+
+                <!-- dbut du raport wagetax -->
+
+                        <record id="wagetax_report_action" model="ir.actions.server">
+                              <field name="name">Drownload the excel file of Wagetax</field>
+                              <field name="type">ir.actions.server</field>
+                              <field name="model_id" ref="model_wagetax_declaration"/>
+                              <field name="state">code</field>
+                              <field name="code">action = self.wagetax_report_xls(cr, uid, context.get('active_ids'), context=context)</field>
+                        </record>
+                         <record id="wagetax_reprot_action_view" model="ir.values">
+                            <field name="model_id" ref="model_wagetax_declaration"/>
+                            <field name="name">Drownload the excel file of Wagetax</field>
+                            <field name="key2">client_action_multi</field>
+                            <field name="value" eval= "'ir.actions.server,' + str(ref('wagetax_report_action'))"/>
+                            <field name="key">action</field>
+                            <field name="model">wagetax.declaration</field>
+                        </record>
+                   <!-- fin du raport wagetax -->
+
+        <!-- fin du mmodule wagetax -->
+
+        <!-- debut du module TSE -->
+                <!-- fin de la vue liste de TSE -->
+                    <record model="ir.ui.view" id="eq_specialtax_form"> 
+                        <field name="name">tse.form</field> 
+                        <field name="model">eq.specialtax.declaration</field>  
+                        <field name="type">form</field> 
+                        <field name="arch" type="xml">
+                            <form string="DECLARATION TSE : Form"  >
+                              <group>
+                                <field name="state"/>
+                              </group>
+                              <group> 
+                                <group> 
+                                    <field name='date'/> 
+                                    <field name='periodicity'/> 
+                                    <field name='company_id'
+                                           on_change="on_change_company_elements(company_id)"
+                                           context="{'default_company_id':company_id, 'default_tax_period': tax_period, 'default_tax_service': tax_service, 'default_company_tax_code': company_tax_code}"/> 
+                                    
+                                </group>
+
+                                <group>
+                                    <field name='tax_period'/>
+                                    <field name='tax_service'/>
+                                    <field name='company_tax_code'/>
+                                </group>
+                               </group>
+                                <sheet>
+                                  <group>
+                                    <group>
+                                        <field name='revenu_wout_tax' on_change="taxable_revenu_function()"/>
+                                        <field name='ops_exempt_tax_revenu'/>
+                                        <field name='delivery_onself_revenu'/>
+                                    </group>
+                                    <group>
+                                        <field name='taxable_revenu' on_change="tax_amount_calcul()"/>
+                                        <field name='rate' on_change="tax_amount_calcul()"/>
+                                        <field name='tax_amount'/>
+                                        <field name= 'regulation'/>
+                                    </group>
+                                    <group>
+                                        <field name='amount_topay'/>
+                                        <field name='amount_toreport'/>
+                                    </group>
+                                   </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </record>
+                <!-- fin de la vue form de TSE -->
+                <!-- La vue liste de TSE -->
+                    <record model="ir.ui.view" id="eq_specialtax_tree">
+                        <field name="name">tse.tree</field>
+                        <field name="model">eq.specialtax.declaration</field>
+                        <field name="type">tree</field> 
+                        <field name="arch" type="xml">
+                            <tree string="Eq Special Tax declaration : Tab"  > 
+                                <field name='name'/> 
+                                <field name='date'/> 
+                                <field name='periodicity'/>
+                                <field name='tax_service'/>
+                                <field name='taxable_revenu' sum="Taxable Revenu" />
+                                <field name='amount_topay' sum="Tax Amount to pay"/>
+                                <field name='amount_toreport' sum="Tax Amount to report"/>
+                                    
+                            </tree>
+                        </field>
+                    </record>
+            <!-- fin de la vue liste de TSE -->
+                     <record model="ir.actions.act_window" id="action_eq_specialtax">
+                        <field name="name">Eq Special Tax</field>
+                        <field name="res_model">eq.specialtax.declaration</field>
+                        <field name="view_type">form</field>
+                        <field name="view_mode">tree,form</field>
+                    </record>
+
+            <!-- debut de la vue du wizzard de tse -->
+
+                    <record id="eq_specialtax_xls_form" model="ir.ui.view">
+                        <field name="name"> TSE Xls Form</field>
+                        <field name="model">eq_specialtax.report.file</field>
+                        <field name="type">form</field>
+                        <field name="arch" type="xml">
+                            <form string="Export eq_special tax file"  >
+                                <group>
+                                    <label string="Save the file in  excel format ' .'xls' ."/>
+                                    <field name='file_name' invisible="1"/>
+                                    <field name="file" readonly="1" filename="file_name" nolabel="1"/>
+                                </group>
+                                <footer>
+                                    <button string="Close" class="oe_highlight" special="cancel"/>
+                                </footer>
+                            </form>
+                        </field>
+
+                    </record>
+
+                <!-- fin de la vue du wizzard de tse -->
+
+                <!-- dbut du raport tse -->
+
+                        <record id="eq_specialtax_report_action" model="ir.actions.server">
+                              <field name="name">Drownload the excel file of eq special tax</field>
+                              <field name="type">ir.actions.server</field>
+                              <field name="model_id" ref="model_eq_specialtax_declaration"/>
+                              <field name="state">code</field>
+                              <field name="code">action = self.eq_specialtax_report_xls(cr, uid, context.get('active_ids'), context=context)</field>
+                        </record>
+                         <record id="eq_specialtax_reprot_action_view" model="ir.values">
+                            <field name="model_id" ref="model_eq_specialtax_declaration"/>
+                            <field name="name">Drownload the excel file of eq special tax</field>
+                            <field name="key2">client_action_multi</field>
+                            <field name="value" eval= "'ir.actions.server,' + str(ref('eq_specialtax_report_action'))"/>
+                            <field name="key">action</field>
+                            <field name="model">eq.specialtax.declaration</field>
+                        </record>
+                   <!-- fin du raport tse -->
+
+         <!-- fin du module TSE -->
+
+         <!--debut du module tva -->
+                <!-- fin de la vue liste de vat -->
+                    <record model="ir.ui.view" id="vat_form"> 
+                        <field name="name">vat.form</field> 
+                        <field name="model">vat.declaration</field> 
+                        <field name="type">form</field> 
+                        <field name="arch" type="xml">
+                            <form string="VAT DECLARATION : Form"  >
+                              <group>
+                                <field name="state"/>
+                              </group>
+                              <group> 
+                                    <group> 
+                                        <field name='date'/> 
+                                        <field name='periodicity'/>
+                                        <field name='company_id'
+                                           on_change="on_change_company_elements(company_id)"
+                                           context="{'default_company_id':company_id, 'default_tax_period': tax_period, 'default_tax_service': tax_service, 'default_company_tax_code': company_tax_code}"/> 
+                                    </group>
+                                    <group>
+                                         <field name='tax_period'/>
+                                        <field name="tax_service"/>
+                                        <field name='company_tax_code'/>
+                                    </group>
+                              </group>
+                              <sheet>
+                                    <string>01- OPERATIONS CARRIED OUT</string>
+                                    <group>
+                                        <group>
+                                            <field name='revenu_wout_vat'/>
+                                            <field name='export_deduction'/>
+                                            <field name='legal_ops_exempt_vat_revenu'/>
+                                            <field name= 'conv_ops_exempt_vat_revenu'/>
+                                             <field name='other_non_vat_revenu'/>
+                                        </group>
+                                        <group>
+                                            <field name='difference'/>
+                                            <field name='vat_delivery_onself_revenu'/>
+                                            <field name='taxable_revenu_wout_vat' on_change="taxable_revenu_function()"/>
+                                        </group>
+                                   </group>
+                                   <string>02- Gross VAT</string>
+                                   <table width="100%" border="0">
+                                        <tr>
+                                            <td>
+                                                <string>
+                                                    <b>Taxable turnover HT</b>
+                                                </string>
+                                            </td>
+                                            <td>
+                                                <string>
+                                                    <b>RATE ( In %)</b>
+                                                </string>
+                                            </td>
+                                            <td>
+                                                <string>
+                                                    <b>AMOUNTS</b>
+                                                </string>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <field name="normal_rate" on_change="normal_rate_revenu_amount_calcul()"
+                                                    context="{default_normal_rate_revenu_amount: normal_rate_revenu_amount}"/>
+                                            </td>
+                                            <td>
+                                                <field name="normal_rate_vat_amount" on_change="normal_rate_revenu_amount_calcul()" context="{default_normal_rate_revenu_amount: normal_rate_revenu_amount}"/>
+                                            </td>
+                                            <td>
+                                               <field name="normal_rate_revenu_amount"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <field name="minimal_rate" on_change="minimal_rate_revenu_amount_calcul(self, cr, uid, ids, fields, arg, context)"/>
+                                            </td>
+                                            <td>
+                                                <field name="minimal_rate_vat_amount" on_change="minimal_rate_revenu_amount_calcul(self, cr, uid, ids, fields, arg, context)"/>
+                                            </td>
+                                            <td>
+                                               <field name="minimal_rate_revenu_amount"/>
+                                            </td>
+                                        </tr>
+                                   </table><br/><br/>
+                                   <string>03-REGULARIZATION VAT</string>
+                                   <group>
+                                     <group>
+                                            <field name="deductible_vat_reserve"/>
+                                     </group>
+                                      <group>
+                                            <field name="monthly_deductible_vat"/>
+                                            <field name="lastest_vat_credit"/>
+                                            <field name="deductible_vat_amount" on_change="on_change_deductible_vat_statement"/>
+                                            <field name="deductible_vat_total"/>
+                                     </group>
+                                      <group>
+                                            <field name="vat_gross_total"/>
+                                            <field name="vat_to_pay"/>
+                                            <field name="credit_vat_toreport"/>
+                                            <field name="credit_vat_torefund"/>
+                                     </group>
+                                   </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </record>
+                <!-- fin de la vue form de tva -->
+                <!-- La vue liste de tva -->
+
+                    <record model="ir.ui.view" id="vat_tree">
+                        <field name="name">vat.tree</field>
+                        <field name="model">vat.declaration</field>
+                        <field name="type">tree</field> 
+                        <field name="arch" type="xml">
+                            <tree string="VAT DECLARATION : Tab" >
+                                <field name='name' /> 
+                                <field name='date' /> 
+                                <field name='periodicity' />
+                                <field name='tax_service' />
+                                <field name='revenu_wout_vat' sum="Total revenu without tax" />
+                                <field name='vat_gross_total' sum="4 - VAT GROSS TOTAL" />
+                                <field name='deductible_vat_total' sum="TOTAL DEDUCTION" />
+                                <field name='vat_to_pay' sum="Vat to pay" /> 
+                                <field name='credit_vat_toreport' sum="Vat credit to report"/>
+                            </tree>
+                        </field>
+                    </record>
+                <!-- fin de la vue liste de tva -->
+                     <record model="ir.actions.act_window" id="action_vat">
+                        <field name="name">vat</field>
+                        <field name="res_model">vat.declaration</field>
+                        <field name="view_type">form</field>
+                        <field name="view_mode">tree,form</field>
+                    </record>
+
+
+
+                <!-- debut de la vue du wizzard de vat -->
+
+                    <record id="vat_xls_form" model="ir.ui.view">
+                        <field name="name"> vat Xls Form</field>
+                        <field name="model">vat.report.file</field>
+                        <field name="type">form</field>
+                        <field name="arch" type="xml">
+                            <form string="Export vat file"  >
+                                <group>
+                                    <label string="Sauve the file in excel format ' .'xls' ."/>
+                                    <field name='file_name' invisible="1"/>
+                                    <field name="file" readonly="1" filename="file_name" nolabel="1"/>
+                                </group>
+                                <footer>
+                                    <button string="Close" class="oe_highlight" special="cancel"/>
+                                </footer>
+                            </form>
+                        </field>
+
+                    </record>
+
+                <!-- fin de la vue du wizzard de vat -->
+
+                <!-- dbut du raport vat -->
+
+                        <record id="vat_report_action" model="ir.actions.server">
+                              <field name="name">Drownload the excel file of vat</field>
+                              <field name="type">ir.actions.server</field>
+                              <field name="model_id" ref="model_vat_declaration"/>
+                              <field name="state">code</field>
+                              <field name="code">action = self.vat_report_xls(cr, uid, context.get('active_ids'), context=context)</field>
+                        </record>
+                         <record id="vat_reprot_action_view" model="ir.values">
+                            <field name="model_id" ref="model_vat_declaration"/>
+                            <field name="name">Drownload the excel file of vat</field>
+                            <field name="key2">client_action_multi</field>
+                            <field name="value" eval= "'ir.actions.server,' + str(ref('vat_report_action'))"/>
+                            <field name="key">action</field>
+                            <field name="model">vat.declaration</field>
+                        </record>
+                   <!-- fin du raport vat -->
+
+         <!-- fin du module vat -->
+
+         <!-- debut du module etat -->
+            <!-- debut du formulaire  etat -->
+                    <record model="ir.ui.view" id="deductiblevat_form"> 
+                        <field name="name">deductiblevat.form</field> 
+                        <field name="model">deductiblevat.statement</field> 
+                        <field name="type">form</field> 
+                        <field name="arch" type="xml">
+                            <form string=" Deductible VAT Statement Form"  >
+                              <group>
+                                 <field name='state'/>
+                              </group>
+                              <group> 
+                                <group> 
+                                    <field name='date'/> 
+                                    <field name="periodicity"/>
+                                    <field name='company_id'
+                                           on_change="on_change_company_elements(company_id)"
+                                           context="{'default_company_id':company_id, 'default_tax_period': tax_period, 'default_tax_service': tax_service, 'default_company_tax_code': company_tax_code}"/>  
+                                </group>
+                                <group>
+                                    <field name='tax_period'/>
+                                    <field name='tax_service'/>
+                                    <field name='company_tax_code'/>
+                                </group>
+                              </group>
+                                
+                              <sheet>
+                                <group>
+                                    <field name='total_statement'/>
+                                </group>
+                               
+                                <notebook >
+                                    <page string="Adds The Deductibles VAT Statement">
+                                        <field name="element_statement_ids" colspan="4" nolabel="1">
+                                            <tree string="Order lines" editable="bottom">
+                                                 <field name='date' />
+                                                    <field name='supplier' />
+                                                    <field name='supplier_taxt_code' />
+                                                    <field name='document_ref'/>
+                                                    <field name= 'goods_definition'/>
+                                                    <field name='amount' sum="Amount Total" />
+                                                    <field name='annual_tax'/>
+                                                    <field name='vat_amount' sum="VAT Amount" />
+                                                    <field name='deduction_rate' sum="Deduction Rate"/>
+                                                    <field name='deductible_vat_amount' sum="Deductible VAT Amount" />
+                                            </tree>
+                                            <form string="Order lines">
+                                                <group col="4">
+                                                    <field name='date' />
+                                                    <field name='supplier'/>
+                                                    <field name='supplier_taxt_code' />
+                                                    <field name='document_ref' />
+                                                    <field name= 'goods_definition'/>
+                                                    <field name='amount' />
+                                                    <field name='annual_tax'/>
+                                                    <field name='vat_amount'/>
+                                                    <field name='deduction_rate' />
+                                                    <field name='deductible_vat_amount' on_change="calcul_total_statement(self, cr, uid, ids, fields, arg, context)" context="{ default_total_statement:total_statement}" />
+                                                </group>
+                                            </form>
+                                        </field>
+                                    </page>
+                                </notebook>
+                               </sheet>
+                           </form>
+                        </field>
+                    </record>
+                <!-- fin de la vue form de etat -->
+                <!-- La vue liste de etat -->
+                    <record model="ir.ui.view" id="deductiblevat_tree">
+                        <field name="name">deductiblevatstatement.tree</field>
+                        <field name="model">deductiblevat.statement</field>
+                        <field name="type">tree</field> 
+                        <field name="arch" type="xml">
+                            <tree string="Deductible VAT Statement"  > 
+                                 <field name="name"/> 
+                                 <field name='date'/> 
+                                 <field name="periodicity"/>
+                                 <field name='tax_service'/>
+                                  <field name='total_statement' sum="Total"/>
+                                    
+                            </tree>
+                        </field>
+                    </record>
+                <!-- fin de la vue liste de etat -->
+
+                     <record model="ir.actions.act_window" id="action_deductiblevat"> 
+                        <field name="name">Deductible VAT Statement</field> 
+                        <field name="res_model">deductiblevat.statement</field> 
+                        <field name="view_type">form</field> 
+                        <field name="view_mode">tree,form</field>
+                    </record>
+
+                <!-- debut de la vue du wizzard de etat -->
+
+                    <record id="deductiblevat_xls_form" model="ir.ui.view">
+                        <field name="name"> Deductible VAT Statement Xls Form</field>
+                        <field name="model">deductiblevat.report.file</field>
+                        <field name="type">form</field>
+                        <field name="arch" type="xml">
+                            <form string="Export Deductible VAT Statement file"  >
+                                <group>
+                                    <label string="Sauve the file in excel format ' .'xls' ."/>
+                                    <field name='file_name' invisible="1"/>
+                                    <field name="file" readonly="1" filename="file_name" nolabel="1"/>
+                                </group>
+                                <footer>
+                                    <button string="Close" class="oe_highlight" special="cancel"/>
+                                </footer>
+                            </form>
+                        </field>
+
+                    </record>
+
+                <!-- fin de la vue du wizzard de etat -->
+
+                <!-- dbut du raport etat -->
+
+                        <record id="deductiblevat_report_action" model="ir.actions.server">
+                              <field name="name">Drownload the file of Deductible VAT Statement</field>
+                              <field name="type">ir.actions.server</field>
+                              <field name="model_id" ref="model_deductiblevat_statement"/>
+                              <field name="state">code</field>
+                              <field name="code">action = self.deductiblevat_report_xls(cr, uid, context.get('active_ids'), context=context)</field>
+                        </record>
+                         <record id="deductiblevat_reprot_action_view" model="ir.values">
+                            <field name="model_id" ref="model_deductiblevat_statement"/>
+                            <field name="name">Drownload the file of Deductible VAT Statement</field>
+                            <field name="key2">client_action_multi</field>
+                            <field name="value" eval= "'ir.actions.server,' + str(ref('deductiblevat_report_action'))"/>
+                            <field name="key">action</field>
+                            <field name="model">deductiblevat.statement</field>
+                        </record>
+                <!-- fin du raport etat -->
+
+            <!-- fin du module etat -->
+
+
+            <!-- debut des elements d'etat -->
+
+                <!-- debut de la form element etat -->
+                    <record model="ir.ui.view" id="deductiblevatstatementlines_form"> 
+                        <field name="name">deductiblevatstatementlines.form</field> 
+                        <field name="model">deductiblevat.statement.lines</field> 
+                        <field name="type">form</field> 
+                        <field name="arch" type="xml">
+                            <form string=" Deductible VAT Statement Lines Form"  >
+                                <group>
+                                    <field name="date"/>
+                                    <field name="supplier"/>
+                                    <field name='supplier_taxt_code'/> 
+                                    <field name="document_ref"/>
+                                    <field name="goods_definition"/>
+                                    <field name='amount' on_change="func_vat_amount(self, cr, uid, ids, fields, arg, context)"/>
+                                    <field name='annual_tax' on_change="func_vat_amount(self, cr, uid, ids, fields, arg, context)"/>
+                                    <field name='vat_amount' on_change="func_deductible_vat_amount(self, cr, uid, ids, fields, arg, context)"/>
+                                    <field name='deduction_rate' on_change="func_deductible_vat_amount(self, cr, uid, ids, fields, arg, context)"/>
+                                    <field name='deductible_vat_amount'/>
+                            </group>
+                           </form>
+                        </field>
+                    </record>
+            <!-- debut de la form element etat -->
+            
+
+        <menuitem id="declaration" name="Declarartion CI"/>
+           <menuitem name="DECLARATION CI" id="section_main_menu_declaration" parent="declaration"/>
+
+            <menuitem name="Social Fund" id="choix_socialfund" parent="section_main_menu_declaration" action="action_socialfund"/>
+              
+            <menuitem name="Training Fund" id="choix_trainingfund" parent="section_main_menu_declaration" action="action_trainingfund"/>
+              
+            <menuitem name="Wagetax" id="choix_wagetax" parent="section_main_menu_declaration" action="action_wagetax"/>
+              
+            <menuitem name="Eq Special Tax" id="choix_eq_specialtax" parent="section_main_menu_declaration" action="action_eq_specialtax"/>
+              
+            <menuitem name="VAT" id="choix_vat" parent="section_main_menu_declaration" action="action_vat"/>
+              
+            <menuitem name="Deductible VAT Statement" id="choix_deductiblevat" parent="section_main_menu_declaration" action="action_deductiblevat"/>
+              
+              
+    </data>
+</openerp>
